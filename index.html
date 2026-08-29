@@ -1,0 +1,2912 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mquanprofile</title>
+                <style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="preload" as="image" href="https://cdn.discordapp.com/embed/avatars/0.png">
+                <link rel="preload" as="image" href="./images/offline.png">
+            <link rel="preload" as="image" href="./assets/images/avatar-quan.png">
+     
+    <link rel="stylesheet" href="./styles/bio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="./styles/tippy_scale.css">
+            <link rel="stylesheet" href="./styles/nouislider.min.css">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;500;600;700&amp;subset=latin-ext&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/iziToast.min.css">
+    <link rel="icon" type="image/x-icon" href="./images/offline.png">
+    <meta name="theme-color" content="#0b0b0b">
+    <meta name="description" content="Nguyễn Minh Quân">
+    <meta name="author" content="Minh Quan">
+    <meta property="og:title" content="Nguyễn Minh Quân">
+    <meta property="og:description" content="Nguyễn Minh Quân">
+    <meta property="og:image" content="https://zyo.lol/og?bg=0b0b0b">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nguyễn Minh Quân">
+    <meta name="twitter:description" content="Nguyễn Minh Quân">
+    <meta name="twitter:image" content="https://zyo.lol/og?bg=0b0b0b">
+    <!-- font 4 bio -->
+    
+                <style>
+                    @font-face {
+                        font-family: 'Sakura';
+                        src: url('./images/template_font_Sakura.woff2');
+                    }
+                .discord_presence_name,
+    .discord_presence_view_profile {
+        font-family: 'Pixelify Sans', sans-serif !important;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings: "slnt" 0;
+    }
+
+    .widget_name.discord_presence_name,
+    .widget_discord_name_link.discord_presence_name,
+    .discord_presence_name {
+        position: relative;
+        display: inline-block;
+        color: #ffe3ef !important;
+        font-size: 2.35rem !important;
+        font-weight: 700 !important;
+        line-height: 1.18em !important;
+        letter-spacing: 0.01em !important;
+        text-decoration: none !important;
+        background: linear-gradient(
+            100deg,
+            #fff0f7 0%,
+            #ffffff 22%,
+            #ff8ec4 46%,
+            #ff4fa0 58%,
+            #ffd2e4 74%,
+            #ffffff 100%
+        );
+        background-size: 240% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter:
+            drop-shadow(0 0 6px rgba(255, 138, 191, 0.85))
+            drop-shadow(0 0 18px rgba(255, 80, 162, 0.55))
+            drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+        animation:
+            discordNameShine 4s linear infinite,
+            discordNamePulse 3s ease-in-out infinite;
+        transition: filter 0.35s ease, transform 0.35s ease;
+        will-change: background-position, filter;
+    }
+
+    .widget_discord_name_link.discord_presence_name:hover {
+        filter:
+            drop-shadow(0 0 9px rgba(255, 158, 201, 1))
+            drop-shadow(0 0 26px rgba(255, 80, 162, 0.8))
+            drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4));
+        transform: translateY(-1px) scale(1.015);
+    }
+
+    .widget_description,
+    .discord_presence_description {
+        font-family: "Inter", "Segoe UI", Arial, sans-serif !important;
+        color: #fce4ee !important;
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+        line-height: 1.4em !important;
+        letter-spacing: 0.015em !important;
+        text-shadow:
+            0 1px 2px rgba(0, 0, 0, 0.55),
+            0 0 10px rgba(255, 150, 195, 0.25) !important;
+        filter: none !important;
+        background: none !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+        -webkit-text-fill-color: #fce4ee !important;
+        animation: none !important;
+        opacity: 0.95 !important;
+    }
+
+    .discord_presence_view_profile {
+        font-size: 1.2rem !important;
+        font-weight: 400 !important;
+        color: #fafafa !important;
+        background-color: #229150 !important;
+        border-radius: 8px !important;
+    }
+
+    @keyframes discordNameShine {
+        0%   { background-position: 0% 50%; }
+        100% { background-position: 240% 50%; }
+    }
+
+    @keyframes discordNamePulse {
+        0%, 100% {
+            filter:
+                drop-shadow(0 0 6px rgba(255, 138, 191, 0.75))
+                drop-shadow(0 0 16px rgba(255, 80, 162, 0.45))
+                drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+        }
+        50% {
+            filter:
+                drop-shadow(0 0 9px rgba(255, 158, 201, 0.95))
+                drop-shadow(0 0 24px rgba(255, 80, 162, 0.7))
+                drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+        }
+    }
+    </style>
+            <style>
+    .zyo-discord-presence-skeleton,
+    .zyo-second-tab-skeleton {
+        width: 100% !important;
+        pointer-events: none;
+    }
+    .zyo-skeleton-widget-content {
+        min-height: 86px;
+    }
+    .zyo-discord-presence-skeleton .widget_text_container,
+    .zyo-second-tab-skeleton .widget_text_container {
+        min-width: 0;
+        flex: 1;
+    }
+    .zyo-discord-presence-skeleton .widget_avatar_container,
+    .zyo-second-tab-skeleton .widget_avatar_container {
+        flex: 0 0 auto;
+    }
+    .zyo-skeleton-circle,
+    .zyo-skeleton-line {
+        width: 100%;
+        display: block;
+        background: linear-gradient(90deg, rgba(255,255,255,.08), rgba(255,255,255,.22), rgba(255,255,255,.08));
+        background-size: 220% 100%;
+        animation: zyoSkeletonLoading 1.1s linear infinite;
+    }
+    .zyo-skeleton-circle {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+    .zyo-skeleton-line {
+        width: 100%;
+        max-width: 180px;
+        height: 12px;
+        margin: 6px 0;
+        border-radius: 999px;
+    }
+    .zyo-skeleton-title {
+        max-width: 120px;
+        height: 14px;
+    }
+    .zyo-skeleton-short {
+        max-width: 82px;
+    }
+    .zyo-skeleton-status-dot {
+        width: 18px;
+        height: 18px;
+    }
+    .profile-body-4 .zyo-skeleton-widget-content {
+        min-height: 88px;
+    }
+    .profile-body-4 .zyo-discord-presence-skeleton,
+    .profile-body-4 .zyo-second-tab-skeleton {
+        min-width: 280px;
+    }
+    @media (max-width: 768px) {
+        .profile-body-4 .zyo-discord-presence-skeleton,
+        .profile-body-4 .zyo-second-tab-skeleton {
+            min-width: 0;
+        }
+    }
+    @keyframes zyoSkeletonLoading {
+        from { background-position: 220% 0; }
+        to { background-position: -220% 0; }
+    }
+</style><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function zyoLoadAnalytics(){
+    if (window.zyoAnalyticsLoaded) {
+      return;
+    }
+    window.zyoAnalyticsLoaded = true;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-S74ZMJ88EG';
+    document.head.appendChild(script);
+    gtag('js', new Date());
+    gtag('config', 'G-S74ZMJ88EG');
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach((eventName) => {
+    window.addEventListener(eventName, zyoLoadAnalytics, { once: true, passive: true });
+  });
+  window.addEventListener('load', () => {
+    setTimeout(zyoLoadAnalytics, 3500);
+  });
+</script><style>.Typewriter__cursor{-webkit-animation:Typewriter-cursor 1s infinite;animation:Typewriter-cursor 1s infinite;margin-left:1px}@-webkit-keyframes Typewriter-cursor{0%{opacity:0}50%{opacity:1}100%{opacity:0}}@keyframes Typewriter-cursor{0%{opacity:0}50%{opacity:1}100%{opacity:0}}</style></head>
+
+
+<body data-copy-protection class="profile-body-1" style=" background: #050505"><div id="overlay" class="overlay"></div>
+<div closeoutsidepopup="" class="popup_content_container" id="link_preview_container" style="display: none;">
+    <h1 class="header" style="font-size: 21px;">Do you want to visit this site?</h1>
+    <div class="input_content">
+        <div class="center">
+            <input type="text" name="alias" class="input" id="link_preview" readonly="">
+        </div>
+        <div class="flex">
+            <button class="close-button" onclick="closePopup('link_preview_container')">Go Back</button>
+            <a class="button_submit" id="link_preview_button" style="width: 100px">Visit Site</a>
+        </div>
+    </div>
+</div>
+<style>
+    * {
+        font-family: 'Sakura', sans-serif;        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "slnt" 0;
+        box-sizing: border-box;
+            }
+    </style>
+<style>
+    .tippy-content {
+                                    font-size: 15px;
+                        }
+</style>
+<script>
+                    const fontSize = 1;
+                const textElements = document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6, .tippy-content');
+    textElements.forEach(el => {
+        const currentSize = window.getComputedStyle(el).fontSize;
+        const newSize = parseFloat(currentSize) + fontSize ?? 0;
+        el.style.fontSize = `${newSize}px`;
+    });
+</script>
+<style>
+    ::selection {
+        background: #ffffff;
+                color: #010101;
+            }
+</style>
+<style>
+    .bio-container {
+                    --iconGlow: drop-shadow(#ffffff 1px 0 7px);
+                --badgeColor: #ffffff;
+                    --badgeGlow: drop-shadow(#ffffff 1px 0 7px);
+                            --audioControlColor: #ffffff ;
+            --audioControlRgba05: rgba(255, 255, 255, 0.5);
+                            --avatarRadius: 50%;
+            }
+</style>
+<style>
+    .bio-container .content .top .img_container > img.img:not(.img_effect) {
+        display: block;
+        width: 48%;
+        height: 48%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    .discord_presence_widget .widget_avatar_container {
+        position: relative;
+        overflow: visible;
+    }
+
+    @media (max-width: 768px) {
+        .bio-container .content .top .img_container > img.img:not(.img_effect) {
+            width: 82%;
+            height: 82%;
+        }
+    }
+
+    .discord_presence_avatar_effect {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 138%;
+        height: 138%;
+        max-width: none;
+        object-fit: contain;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .discord_presence_widget .discord_presence_avatar {
+        position: relative;
+        z-index: 1;
+    }
+
+    .discord_presence_widget .discord_presence_status {
+        position: absolute;
+        z-index: 3;
+    }
+    .discord_presence_status {
+        width: 16px !important;
+        height: 16px !important;
+        border-radius: 50% !important;
+        border: 3px solid rgba(11, 11, 11, 0.95) !important;
+        background: #747f8d !important;
+        object-fit: none !important;
+    }
+
+    .discord_presence_status[data-status="online"] { background: #23a55a !important; }
+    .discord_presence_status[data-status="idle"] { background: #f0b232 !important; }
+    .discord_presence_status[data-status="dnd"] { background: #f23f43 !important; }
+    .discord_presence_status[data-status="offline"] { background: #80848e !important; }
+
+    .discord_presence_widget .widget_content {
+        position: relative;
+        border-radius: 28px !important;
+        border: 1.5px solid rgba(255, 174, 209, 0.28) !important;
+        background:
+            linear-gradient(150deg, rgba(40, 22, 33, 0.62) 0%, rgba(22, 14, 20, 0.72) 100%) !important;
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.38),
+            0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+            0 1px 0 rgba(255, 255, 255, 0.07) inset,
+            0 0 24px rgba(255, 80, 162, 0.14) !important;
+        -webkit-backdrop-filter: blur(8px) saturate(1.1);
+        backdrop-filter: blur(8px) saturate(1.1);
+        transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease !important;
+    }
+
+    .discord_presence_widget .widget_content::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1.5px;
+        background: linear-gradient(135deg,
+            rgba(255, 210, 228, 0.45),
+            rgba(255, 80, 162, 0.18) 45%,
+            rgba(255, 255, 255, 0.05) 70%,
+            rgba(255, 142, 196, 0.35));
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        mask-composite: exclude;
+        pointer-events: none;
+        opacity: 0.9;
+    }
+
+    .discord_presence_widget .widget_content:hover {
+        border-color: rgba(255, 174, 209, 0.4) !important;
+        box-shadow:
+            0 14px 38px rgba(0, 0, 0, 0.42),
+            0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+            0 1px 0 rgba(255, 255, 255, 0.08) inset,
+            0 0 34px rgba(255, 80, 162, 0.22) !important;
+        transform: translateY(-2px);
+    }
+
+    [data-like-button].active .likeIcon,
+    [data-like-button][aria-pressed="true"] .likeIcon {
+        color: #ff2f4f !important;
+        fill: currentColor !important;
+        filter: drop-shadow(0 0 7px rgba(255, 47, 79, 0.65));
+    }
+
+    .revealAudioLike {
+        position: fixed !important;
+        left: 16px !important;
+        bottom: 16px !important;
+        z-index: 1200 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 188px !important;
+        height: 44px !important;
+        min-height: 0 !important;
+        padding: 8px 10px !important;
+        border-radius: 14px !important;
+        border: 1px solid rgba(255, 255, 255, 0.14) !important;
+        background: rgba(12, 12, 12, 0.68) !important;
+        -webkit-backdrop-filter: blur(14px) !important;
+        backdrop-filter: blur(14px) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+        overflow: hidden !important;
+    }
+
+    .revealAudioLike #audio_control,
+    .revealAudioLike .audio_control {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+    }
+
+    .revealAudioLike .audio_control > div:first-child {
+        display: flex !important;
+        align-items: center !important;
+        flex: 0 0 auto !important;
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .revealAudioLike .volumeIcon {
+        flex: 0 0 auto !important;
+        width: 22px !important;
+        height: 22px !important;
+        color: #fff !important;
+    }
+
+    .revealAudioLike .slider-container {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        width: auto !important;
+        height: 18px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .revealAudioLike #slider1 {
+        width: 100% !important;
+        min-width: 0 !important;
+        height: 6px !important;
+    }
+
+    .revealAudioLike #slider1 .noUi-base,
+    .revealAudioLike #slider1 .noUi-connects {
+        height: 6px !important;
+    }
+
+    .revealAudioLike #slider1 .noUi-handle {
+        width: 14px !important;
+        height: 14px !important;
+        right: -7px !important;
+        top: -4px !important;
+        border-radius: 50% !important;
+        box-shadow: none !important;
+    }
+
+    .revealAudioLike #slider1 .noUi-handle::before,
+    .revealAudioLike #slider1 .noUi-handle::after {
+        display: none !important;
+    }
+
+    .audio_lyrics_display,
+    .audio_lyrics_display .lyrics_line,
+    [data-audio-lyrics-display],
+    [data-audio-lyrics-display] .lyrics_line {
+        font-family: "Sansita Swashed", "Segoe UI", Arial, sans-serif !important;
+        letter-spacing: 0 !important;
+    }
+
+    [data-audio-lyrics-display] .lyrics_line.is-symbol {
+        white-space: nowrap !important;
+    }
+    .lop_tippy .tippy-content {
+        font-family: "Sansita Swashed", "Segoe UI", Arial, sans-serif !important;
+        letter-spacing: 0 !important;
+    }
+    [data-copy-protection],
+    [data-copy-protection] * {
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        user-select: none !important;
+        -webkit-user-drag: none !important;
+    }
+
+</style>
+    <div class="background" id="background" style="background: #050505"></div>
+    <audio id="audio" preload="metadata" src="./assets/audio/335368cbd866b945f8cad6d107457247.mp3" data-analytics-played="1"></audio>
+<script>
+    window.zyoAudioLyricsEnabled = true;
+    window.zyoAudioLyricsRequired = true;
+    window.zyoAudioLyricsVisibleSlots = 3;
+    window.zyoInitialAudioLyrics = {"source":"lrc","track":"assets/lyrics/4c5fe6fd65b0ce4150b199a49eb7742e.lrc","synced":""};
+
+    function zyoParseLrcText(text) {
+        const decodeArea = document.createElement('textarea');
+        decodeArea.innerHTML = String(text || '');
+        const normalizedText = decodeArea.value
+            .replace(/\\r\\n/g, '\n')
+            .replace(/\\n/g, '\n')
+            .replace(/\\r/g, '\n')
+            .replace(/\r\n/g, '\n')
+            .replace(/\r/g, '\n')
+            .replace(/\s*(?=\[(?:(?:\d{1,2}:)?\d{1,2}:\d{2}(?:[.,]\d{1,3})?)\])/g, '\n')
+            .trim();
+        const lines = normalizedText.split(/\r?\n/);
+        const rawEntries = [];
+
+        function decodeLyric(value) {
+            decodeArea.innerHTML = value;
+            return decodeArea.value;
+        }
+
+        lines.forEach((line) => {
+            const matches = [...line.matchAll(/\[(?:(\d{1,2}):)?(\d{1,2}):(\d{2})(?:[.,](\d{1,3}))?\]/g)];
+            if (!matches.length) return;
+
+            const lyric = decodeLyric(line.replace(/\[(?:(?:\d{1,2}:)?\d{1,2}:\d{2}(?:[.,]\d{1,3})?)\]/g, '').trim());
+            if (!lyric) return;
+
+            matches.forEach((match) => {
+                const hours = Number(match[1] || 0);
+                const minutes = Number(match[2] || 0);
+                const seconds = Number(match[3] || 0);
+                const fraction = Number(String(match[4] || '0').padEnd(3, '0').slice(0, 3)) / 1000;
+                rawEntries.push({ time: (hours * 3600) + (minutes * 60) + seconds + fraction, text: lyric });
+            });
+        });
+
+        return rawEntries
+            .sort((a, b) => a.time - b.time);
+    }
+
+    function zyoSetCurrentAudioLyrics(track) {
+        const syncedText = track?.lyrics?.synced || track?.synced || '';
+        window.zyoCurrentAudioLyrics = zyoParseLrcText(syncedText);
+        window.zyoCurrentAudioLyricsActiveIndex = null;
+        zyoRenderAudioLyricsDisplay();
+        zyoUpdateAudioLyricsDisplay(0);
+
+        const lyricFile = track?.lyrics?.track;
+        if (track?.lyrics?.source === 'lrc' && lyricFile && !syncedText) {
+            fetch(lyricFile)
+                .then((response) => response.ok ? response.text() : '')
+                .then((text) => {
+                    if (!text) return;
+                    if (track.lyrics) {
+                        track.lyrics.synced = text;
+                    }
+                    window.zyoCurrentAudioLyrics = zyoParseLrcText(text);
+                    window.zyoCurrentAudioLyricsActiveIndex = null;
+                    zyoRenderAudioLyricsDisplay();
+                    zyoUpdateAudioLyricsDisplay(audio?.currentTime || 0);
+                })
+                .catch(() => {});
+        }
+    }
+
+    function zyoAudioLyricsSlotCount() {
+        return Math.max(3, Number(window.zyoAudioLyricsVisibleSlots || 3));
+    }
+
+    function zyoRenderAudioLyricsDisplay() {
+        const display = document.querySelector('[data-audio-lyrics-display]');
+        const list = display?.querySelector('[data-lyrics-list]');
+        if (!display || !list || !Array.isArray(window.zyoCurrentAudioLyrics)) return;
+
+        const slotCount = zyoAudioLyricsSlotCount();
+        list.innerHTML = '';
+        const spacer = document.createElement('p');
+        spacer.className = 'lyrics_line is-spacer';
+        spacer.dataset.lyricsIndex = '-2';
+        spacer.textContent = '\u00a0';
+        list.appendChild(spacer);
+
+        const intro = document.createElement('p');
+        intro.className = 'lyrics_line is-symbol';
+        intro.dataset.lyricsIndex = '-1';
+        intro.textContent = '\u266a\u266a\u266a';
+        list.appendChild(intro);
+
+        window.zyoCurrentAudioLyrics.forEach((line, index) => {
+            const item = document.createElement('p');
+            item.className = 'lyrics_line';
+            item.dataset.lyricsIndex = String(index);
+            item.textContent = line.text;
+            list.appendChild(item);
+        });
+
+        const outro = document.createElement('p');
+        outro.className = 'lyrics_line is-symbol is-outro-note';
+        outro.dataset.lyricsIndex = String(window.zyoCurrentAudioLyrics.length);
+        outro.textContent = '\u266a\u266a\u266a';
+        list.appendChild(outro);
+        list.style.setProperty('--lyrics-visible-slots', String(slotCount));
+    }
+
+    function zyoUpdateAudioLyricsDisplay(currentTime) {
+        if (!window.zyoAudioLyricsEnabled || !Array.isArray(window.zyoCurrentAudioLyrics)) return;
+
+        const display = document.querySelector('[data-audio-lyrics-display]');
+        if (!display) return;
+
+        const lines = window.zyoCurrentAudioLyrics;
+        let activeIndex = -1;
+        if (lines[0]?.time <= currentTime + 0.08) {
+            activeIndex = 0;
+            for (let i = 0; i < lines.length; i++) {
+                if (lines[i].time <= currentTime + 0.08) {
+                    activeIndex = i;
+                } else {
+                    break;
+                }
+            }
+        }
+
+        const lastLyricTime = lines[lines.length - 1]?.time;
+        const isAfterLastLyric = Number.isFinite(lastLyricTime) && currentTime > lastLyricTime + 1.25;
+        if (isAfterLastLyric) {
+            activeIndex = lines.length;
+        }
+
+        display.hidden = false;
+        const list = display.querySelector('[data-lyrics-list]');
+        if (list) {
+            const slotCount = zyoAudioLyricsSlotCount();
+            if (list.children.length !== lines.length + 3) {
+                zyoRenderAudioLyricsDisplay();
+            }
+
+            const activeLineIndex = activeIndex < 0 ? -1 : activeIndex;
+            const activeDomIndex = activeLineIndex + 2;
+            const activePosition = activeLineIndex < 0 || isAfterLastLyric ? 0 : Math.floor(slotCount / 2);
+            const rowHeight = Number(getComputedStyle(display).getPropertyValue('--lyrics-row-height').replace('px', '')) || 24;
+            const rowGap = Number(getComputedStyle(display).getPropertyValue('--lyrics-row-gap').replace('px', '')) || 8;
+            const targetTop = Math.max(0, (activeDomIndex * (rowHeight + rowGap)) - (activePosition * (rowHeight + rowGap)));
+
+            if (window.zyoCurrentAudioLyricsActiveIndex === activeIndex && list.style.transform === `translateY(-${targetTop}px)`) return;
+            window.zyoCurrentAudioLyricsActiveIndex = activeIndex;
+
+            list.querySelectorAll('.lyrics_line').forEach((line) => {
+                const lineIndex = Number(line.dataset.lyricsIndex || 0);
+                const isActive = lineIndex === activeLineIndex;
+                line.classList.toggle('is-active', isActive);
+                line.classList.toggle('is-near', !isActive);
+                line.classList.toggle('is-hidden-spacer', lineIndex === -2);
+                line.style.opacity = '';
+            });
+            list.style.transform = `translateY(-${targetTop}px)`;
+            return;
+        }
+
+        const previous = display.querySelector('[data-lyrics-prev]');
+        const current = display.querySelector('[data-lyrics-current]');
+        const next = display.querySelector('[data-lyrics-next]');
+        if (previous) previous.textContent = lines[activeIndex - 1]?.text || '';
+        if (current) current.textContent = lines[activeIndex]?.text || '';
+        if (next) next.textContent = lines[activeIndex + 1]?.text || '';
+    }
+
+    zyoSetCurrentAudioLyrics({ lyrics: window.zyoInitialAudioLyrics });
+</script>
+<script src="./scripts/plasma-effect.js" type="text/javascript"></script>
+<script>
+    function isIPad() {
+        return (
+            navigator.maxTouchPoints &&
+            navigator.maxTouchPoints > 2 &&
+            /MacIntel/.test(navigator.platform)
+        );
+    }
+
+    const isMobile = window.innerWidth <= 768 || /Mobi|Android|iPhone|iPod|iPad/i.test(navigator.userAgent) || isIPad();
+
+    createPlasmaEffect({
+        color: "#ffffff",
+        renderScale: isMobile ? 0.5 : 0.65,
+        maxFPS: isMobile ? 30 : 45,
+        iterations: isMobile ? 42 : 60,
+        opacity: 0.9,
+        mouseInteractive: false,
+    });
+</script>
+<script>
+    function createSlider(sliderId, sliderValueId, unit) {
+        var slider = document.getElementById(sliderId);
+        var sliderInput = document.getElementById(sliderValueId);
+
+        var startValue = sliderInput.value ? Number(sliderInput.value) : 0;
+
+        if (slider.noUiSlider) {
+            slider.noUiSlider.destroy();
+        }
+        if (slider.querySelector('.noUi-base')) {
+            slider.innerHTML = '';
+            slider.className = '';
+            slider.removeAttribute('style');
+        }
+
+        noUiSlider.create(slider, {
+            start: startValue,
+            connect: [true, false],
+            step: 1,
+            range: {
+                'min': 0,
+                'max': 100
+            },
+            format: {
+                to: function (value) {
+                    return value + unit;
+                },
+                from: function (value) {
+                    return Number(value.replace(unit, ''));
+                }
+            }
+        });
+
+        let isSliding = false;
+
+        slider.noUiSlider.on('update', function (values, handle) {
+            const valueInt = values[handle];
+            sliderInput.value = valueInt.replace(unit, '');
+        });
+    }
+</script>
+<script src="./scripts/iziToast.min.js" type="text/javascript"></script>
+<script src="./scripts/typewritter.min.js" type="text/javascript"></script>
+<script src="./scripts/main.js" type="text/javascript"></script>
+
+        <div class="overlay_audio" onclick="hideOverlay()" style="opacity: 1; display: flex;">
+        <p class="text">Click</p>
+    </div>
+            <div class="revealAudioLike active" style="
+            --audioLikeColor: #ffffff;
+            --audioLikeRgba05: rgba(255, 255, 255, 0.5);
+            --audioLikeRgba02: rgba(255, 255, 255, 0.2);
+        ">
+                    <div class="audio_control" id="audio_control">
+                <div class="">
+                    <svg class="volumeIcon" onclick="toggleActive(this);" id="volumeIcon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48" style="cursor: pointer;"><defs>
+                    <mask id="volumeMedium"><g fill="none" stroke="#fff" stroke-width="4"><path fill="#555" stroke-linejoin="round" d="M24 6v36c-7 0-12.201-9.16-12.201-9.16H6a2 2 0 0 1-2-2V17.01a2 2 0 0 1 2-2h5.799S17 6 24 6Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M32 15a12 12 0 0 1 1.684 1.859A12.07 12.07 0 0 1 36 24c0 2.654-.846 5.107-2.278 7.09A12 12 0 0 1 32 33"></path><path stroke-linecap="round" d="M34.236 41.186C40.084 37.696 44 31.305 44 24c0-7.192-3.796-13.496-9.493-17.02"></path></g></mask>
+                    </defs><path id="changeMask" fill="currentColor" d="M0 0h48v48H0z" mask="url(#volumeMedium)"></path></svg>
+                </div>    
+                <div class="slider-container">
+                    <div id="slider1" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(0%, 0px) scale(1, 1);"></div></div><div class="noUi-origin" style="transform: translate(0%, 0px); z-index: 4;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="100.0" aria-valuetext="100"><div class="noUi-touch-area"></div></div></div></div></div>
+                    <input type="hidden" name="bgOpacity" id="sliderValue1" value="100" readonly="">
+                </div>
+            </div>
+            </div>
+        <div class="bio-container  " style="
+        --nameColor: #ffffff;
+        --nameColor25: rgba(255, 255, 255, 0.25);
+        --descriptionColor: #b6b6b6;
+        --backgroundColor: rgba(11, 11, 11, 0.21);
+        --iconColor: #ffffff;
+        --backgroundBlur: 26px;
+        --nameGlow: 0px 0px 16.5px #ffffff;
+        --descriptionGlow: 0px 0px 16.5px #b6b6b6;
+        --discordBackground: rgba(11, 11, 11, 0.2);
+        --discordBorder: rgba(11, 11, 11, 0.1);
+        --discordDescription: rgba(255, 255, 255, 0.7);
+                --borderRadius: 25px;
+        --bioWidth: 730px;
+        --bioBannerHeight: 120px;
+        --bioBannerFadeStop: 100%;
+    ">
+        <div class="bio_content_container">
+            <div class="content-container css_content_container reveal active">
+                                                    <div class="bio_small_infomation" style="bottom: 12px; left: 15px;">
+                                                <div class="bio_infomation" role="button" tabindex="0" data-tippy-content="Like" data-like-button>
+                                                            <svg class="likeIcon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 32 32" xml:space="preserve"><path d="M23 3a8 8 0 0 0-7 4.13A8 8 0 0 0 9 3a8 8 0 0 0-8 8c0 11 12.857 18 15 18s15-7 15-18a8 8 0 0 0-8-8M9 7c-2.206 0-4 1.794-4 4a1 1 0 0 1-2 0c0-3.309 2.691-6 6-6a1 1 0 0 1 0 2"></path></svg>
+                                <p class="text" id="likeCount" data-like-count>0</p>
+                                                    </div>
+                        
+                                                <div class="border"></div>
+                        
+                        
+                                                <div class="bio_infomation" data-tippy-content="Profile Views">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"></path></svg>
+                                <p class="text" data-view-count>0</p>
+                                                    </div>
+                        
+                                                <div class="border"></div>
+                        
+                                                <div class="bio_infomation" data-tippy-content="Location">
+                            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.574 21.819a1 1 0 0 1-1.149 0l-.002-.002-.006-.004-.018-.014a10 10 0 0 1-.305-.225A25 25 0 0 1 7.757 18.5C5.964 16.508 4 13.61 4 10.364c0-2.203.831-4.324 2.325-5.896C7.821 2.894 9.861 2 12 2s4.179.894 5.674 2.468C19.17 6.04 20 8.16 20 10.364c0 3.246-1.964 6.144-3.757 8.135a25 25 0 0 1-3.337 3.075 15 15 0 0 1-.305.225l-.018.014-.006.004h-.002zM9 10a3 3 0 1 1 6 0 3 3 0 0 1-6 0"></path></svg>
+                            <p class="text">Tp.Hồ Chí Minh, Việt Nam</p>
+                        </div>
+                                            </div>
+                                <div class="content">
+                    <div class="top cardLeft infoRow">
+                                                <div class="img_container">
+                            <img src="./assets/images/Chủ thể.png" alt="Nguyễn Minh Quân" class="img">
+                                                            <img class="img_effect" style="" src="./assets/images/Chủ thể.png">
+                                                    </div>
+                                                <div class="flex-column">
+                            <div class="flex">
+                                                                    <p data-tippy-content="My Name" class="header" id="userName">Nguyễn Minh Quân</p>
+                                                                                                <div class="badge_container singleColor badgeGlow">
+                                        <svg data-tippy-content="Love" id="valentine" width="1em" height="1em" viewBox="0 0 36 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M33 7.64c-1.34-2.75-5.2-5-9.69-3.69A9.87 9.87 0 0 0 18 7.72a9.87 9.87 0 0 0-5.31-3.77C8.19 2.66 4.34 4.89 3 7.64c-1.88 3.85-1.1 8.18 2.32 12.87C8 24.18 11.83 27.9 17.39 32.22a1 1 0 0 0 1.23 0c5.55-4.31 9.39-8 12.07-11.71 3.41-4.69 4.19-9.02 2.31-12.87" /><path fill="none" d="M0 0h36v36H0z" /></svg>
+                                    </div>
+                                                                                            </div>
+                                                            <p id="bio_description" class="bio_description">Computer Science Student<br>Building things with Code &amp; AI.</p>
+                                                                                        <div class="svg_container" style="">
+                                            <a href="https://www.facebook.com/nmquan2346" target="_blank" rel="noopener noreferrer" class="svg_item singleColor" data-social-url="https://www.facebook.com/nmquan2346">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                                <p class="svg_text" style="display: none">https://www.facebook.com/nmquan2346</p>
+                                            </a>
+                                            <a href="https://www.instagram.com/wuaan_nm?igsi=MXQwd2p3bGthMGdraw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="svg_item singleColor" data-social-url="https://www.instagram.com/wuaan_nm?igsi=MXQwd2p3bGthMGdraw%3D%3D&utm_source=qr">
+                                                <i class="fa-brands fa-instagram"></i>
+                                                <p class="svg_text" style="display: none">https://www.instagram.com/wuaan_nm?igsi=MXQwd2p3bGthMGdraw%3D%3D&utm_source=qr</p>
+                                            </a>
+                                            <a href="https://github.com/minhquan006" target="_blank" rel="noopener noreferrer" class="svg_item singleColor" data-social-url="https://github.com/minhquan006">
+                                                <i class="fa-brands fa-github"></i>
+                                                <p class="svg_text" style="display: none">https://github.com/minhquan006</p>
+                                            </a>
+                                            <a href="mailto:quannguyen2342006@gmail.com" target="_blank" rel="noopener noreferrer" class="svg_item singleColor" data-social-url="mailto:quannguyen2342006@gmail.com">
+                                                <i class="fa-solid fa-envelope"></i>
+                                                <p class="svg_text" style="display: none">quannguyen2342006@gmail.com</p>
+                                            </a>
+                                            <a href="https://discord.gg/your-invite" target="_blank" rel="noopener noreferrer" class="svg_item singleColor" data-social-url="https://discord.gg/your-invite">
+                                                <i class="fa-brands fa-discord"></i>
+                                                <p class="svg_text" style="display: none">https://discord.gg/your-invite</p>
+                                            </a>
+                                        </div>
+                                                    </div>
+                    </div>
+                                            <div class="flex_discord">
+                                                                                        <div class="about_me_trigger_card" id="about_me_trigger" role="button" tabindex="0" onclick="openAboutMe(event)" onkeydown="if(event.key==='Enter'||event.key===' '){openAboutMe(event)}">
+    <span class="about_me_shimmer"></span>
+    <div class="about_me_trigger_inner">
+        <div class="about_me_avatar_ring">
+            <img src="./assets/images/IMG_7462.jpg" alt="Nguyễn Minh Quân" class="about_me_avatar_img">
+            <span class="about_me_status_dot"></span>
+        </div>
+        <div class="about_me_trigger_text">
+            <span class="about_me_trigger_name">Nguyễn Minh Quân</span>
+            <span class="about_me_trigger_tag">
+                <i class="fa-solid fa-code"></i> "It's not a bug - it's an undocumented feature."
+                <span class="about_me_trigger_dot">•</span>
+            </span>
+        </div>
+        <div class="about_me_trigger_spacer"></div>
+        <div class="about_me_cta">
+            <span>View Profile</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="about_me_cta_arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+    </div>
+</div>                                                                                </div>
+                                                                                                                    </div>
+            </div>
+<div class="about_me_backdrop" id="about_me_backdrop" onclick="closeAboutMe()"></div>
+<div class="about_me_popup" id="about_me_popup" role="dialog" aria-modal="true" aria-labelledby="about_me_popup_title">
+    <div class="about_me_glow about_me_glow_1"></div>
+    <div class="about_me_glow about_me_glow_2"></div>
+    <div class="about_me_header">
+        <div class="about_me_header_left">
+            <div class="about_me_avatar_ring about_me_avatar_ring_sm">
+                <img src="./assets/images/IMG_7462.jpg" alt="Nguyễn Minh Quân" class="about_me_avatar_img">
+            </div>
+            <div class="about_me_header_text">
+                <h1 class="about_me_title" id="about_me_popup_title">About me</h1>
+                <span class="about_me_subtitle">Nguyen Minh Quan · Portfolio</span>
+            </div>
+        </div>
+        <button class="about_me_close" onclick="closeAboutMe()" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+    </div>
+    <p class="about_me_text">Hi! I'am Quan - a Computer Science student at Ton Duc Thang University. I love programming, AI, web UI, and building small interactive, automated projects.</p>
+    <div class="about_me_grid">
+        <div class="about_me_item">
+            <div class="about_me_item_icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="about_me_item_text">
+                <span class="about_me_label">Role</span>
+                <span class="about_me_value">CS Student</span>
+            </div>
+        </div>
+        <div class="about_me_item">
+            <div class="about_me_item_icon"><i class="fa-solid fa-microchip"></i></div>
+            <div class="about_me_item_text">
+                <span class="about_me_label">Focus</span>
+                <span class="about_me_value">AI / Software</span>
+            </div>
+        </div>
+       <div class="about_me_item">
+            <div class="about_me_item_icon"><i class="fa-solid fa-code"></i></div>
+            <div class="about_me_item_text">
+                <span class="about_me_label">Tech Stack</span>
+                <span class="about_me_value">Java, Python, SQL</span>
+            </div>
+        </div>
+        <div class="about_me_item">
+            <div class="about_me_item_icon"><i class="fa-solid fa-rocket"></i></div>
+            <div class="about_me_item_text">
+                <span class="about_me_label">Exploring</span>
+                <span class="about_me_value">AI & Automation</span>
+            </div>
+        </div>
+    </div>
+    <div class="about_me_footer">
+        <span class="about_me_footer_chip"><i class="fa-solid fa-location-dot"></i> Tp.Ho Chi Minh, Viet Nam</span>
+        <span class="about_me_footer_chip"><i class="fa-solid fa-envelope"></i> quannguyen2342006@gmail.com</span>
+    </div>
+</div>
+<script>
+    function openAboutMe(event) {
+        if (event) event.stopPropagation();
+        document.getElementById('about_me_backdrop').classList.add('active');
+        document.getElementById('about_me_popup').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeAboutMe() {
+        document.getElementById('about_me_backdrop').classList.remove('active');
+        document.getElementById('about_me_popup').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeAboutMe();
+    });
+</script>
+<style>
+    /* ================= About Me trigger bar ================= */
+    .about_me_trigger_card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 20px;
+        padding: 1px;
+        background: linear-gradient(120deg, rgba(255,142,196,0.55), rgba(255,79,160,0.15) 35%, rgba(255,255,255,0.08) 60%, rgba(255,142,196,0.4));
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .about_me_trigger_card:hover,
+    .about_me_trigger_card:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(255, 80, 162, 0.25);
+        outline: none;
+    }
+    .about_me_trigger_inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+        padding: 14px 18px;
+        border-radius: 19px;
+        background: linear-gradient(150deg, rgba(38,16,29,0.92) 0%, rgba(14,10,13,0.95) 60%, rgba(10,10,11,0.97) 100%);
+        overflow: hidden;
+    }
+    .about_me_shimmer {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(100deg, transparent 40%, rgba(255,255,255,0.16) 50%, transparent 60%);
+        background-size: 250% 100%;
+        animation: aboutMeShimmer 5s ease-in-out infinite;
+    }
+    @keyframes aboutMeShimmer {
+        0% { background-position: 200% 0; }
+        60%, 100% { background-position: -60% 0; }
+    }
+    .about_me_avatar_ring {
+        position: relative;
+        z-index: 2;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        padding: 2px;
+        background: linear-gradient(135deg, #ff8ec4, #ff4fa0 45%, #ffd2e4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        box-shadow: 0 0 12px rgba(255, 80, 162, 0.5);
+    }
+    .about_me_avatar_ring .about_me_avatar_img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        border: 2px solid #0e0e10;
+    }
+    .about_me_status_dot {
+        position: absolute;
+        right: 1px;
+        bottom: 1px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #23a55a;
+        border: 2px solid #0e0e10;
+        box-shadow: 0 0 6px rgba(35, 165, 90, 0.8);
+    }
+    .about_me_trigger_text {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        min-width: 0;
+    }
+    .about_me_trigger_name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2em;
+        white-space: nowrap;
+        background: linear-gradient(100deg, #fff0f7 0%, #ffffff 22%, #ff8ec4 46%, #ff4fa0 58%, #ffd2e4 74%, #ffffff 100%);
+        background-size: 240% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 8px rgba(255, 80, 162, 0.35));
+        animation: discordNameShine 5s linear infinite;
+    }
+    .about_me_trigger_tag {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+        font-size: 1.3rem;
+        color: #c9c4c8;
+        white-space: nowrap;
+    }
+    .about_me_trigger_tag i { color: #ff8ec4; font-size: 0.75rem; }
+    .about_me_trigger_dot { color: #6b6670; margin: 0 2px; }
+    .about_me_trigger_spacer { flex: 1 1 auto; min-width: 8px; }
+    .about_me_cta {
+        position: relative;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        flex: 0 0 auto;
+        padding: 9px 18px;
+        border-radius: 999px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #fff0f7;
+        background: linear-gradient(100deg, rgba(255,142,196,0.35), rgba(255,79,160,0.28));
+        border: 1px solid rgba(255,174,209,0.4);
+        box-shadow: 0 0 0 rgba(255, 80, 162, 0);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+    .about_me_cta_arrow { transition: transform 0.25s ease; }
+    .about_me_trigger_card:hover .about_me_cta {
+        background: linear-gradient(100deg, rgba(255,142,196,0.5), rgba(255,79,160,0.4));
+        box-shadow: 0 0 18px rgba(255, 80, 162, 0.45);
+    }
+    .about_me_trigger_card:hover .about_me_cta_arrow {
+        transform: translateX(3px);
+    }
+    @media (max-width: 640px) {
+        .about_me_trigger_tag { display: none; }
+        .about_me_trigger_inner { padding: 12px 14px; }
+    }
+
+    /* ================= About Me modal ================= */
+    .about_me_backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 9998;
+        background: rgba(5, 5, 6, 0.7);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    .about_me_backdrop.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .about_me_popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 9999;
+        transform: translate(-50%, -50%) scale(0.96);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        max-width: 560px;
+        width: 92%;
+        max-height: 86vh;
+        overflow-y: auto;
+        padding: 30px 28px;
+        border-radius: 24px;
+        background: linear-gradient(150deg, rgba(20,20,22,0.98) 0%, rgba(10,10,11,0.99) 100%);
+        border: 1px solid rgba(255,255,255,0.08);
+        box-shadow: 0 25px 70px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.03) inset;
+    }
+    .about_me_popup.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .about_me_glow {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(50px);
+        pointer-events: none;
+        z-index: 0;
+    }
+    .about_me_glow_1 {
+        width: 220px;
+        height: 220px;
+        top: -80px;
+        right: -60px;
+        background: radial-gradient(circle, rgba(255,79,160,0.35), transparent 70%);
+    }
+    .about_me_glow_2 {
+        width: 200px;
+        height: 200px;
+        bottom: -90px;
+        left: -60px;
+        background: radial-gradient(circle, rgba(255,142,196,0.22), transparent 70%);
+    }
+    .about_me_popup .about_me_header {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+    .about_me_popup .about_me_header_left {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+    .about_me_popup .about_me_avatar_ring_sm {
+        width: 52px;
+        height: 52px;
+    }
+    .about_me_popup .about_me_header_text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+    .about_me_popup .about_me_title {
+        margin: 0;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.2em;
+        background: linear-gradient(100deg, #fff0f7 0%, #ffffff 22%, #ff8ec4 46%, #ff4fa0 58%, #ffd2e4 74%, #ffffff 100%);
+        background-size: 240% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 10px rgba(255, 80, 162, 0.4));
+        animation: discordNameShine 5s linear infinite;
+    }
+    .about_me_popup .about_me_subtitle {
+        font-size: 1.2rem;
+        color: #9a9a9a;
+        letter-spacing: 0.02em;
+    }
+    .about_me_popup .about_me_close {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: #cfcfcf;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+    .about_me_popup .about_me_close:hover {
+        background: rgba(255,79,160,0.18);
+        border-color: rgba(255,142,196,0.4);
+        color: #fff;
+        transform: rotate(90deg);
+    }
+    .about_me_popup .about_me_text {
+        position: relative;
+        z-index: 1;
+        margin: 20px 0 22px;
+        color: #d9d9d9;
+        font-size: 1.3rem;
+        line-height: 1.6em;
+    }
+    .about_me_popup .about_me_grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+    .about_me_popup .about_me_item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.03);
+        transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+    .about_me_popup .about_me_item:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255,142,196,0.35);
+        background: rgba(255,142,196,0.06);
+    }
+    .about_me_popup .about_me_item_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        flex: 0 0 auto;
+        border-radius: 12px;
+        color: #ffd2e4;
+        font-size: 1.2rem;
+        background: linear-gradient(150deg, rgba(255,142,196,0.25), rgba(255,80,162,0.12));
+        border: 1px solid rgba(255,174,209,0.3);
+    }
+    .about_me_popup .about_me_item_text {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        min-width: 0;
+    }
+    .about_me_popup .about_me_label {
+        font-size: 1.0rem;
+        letter-spacing: 0.06em;
+        color: #9a9a9a;
+        text-transform: uppercase;
+    }
+    .about_me_popup .about_me_value {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #fff;
+    }
+    .about_me_popup .about_me_footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .about_me_popup .about_me_footer_chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        font-size: 1.0rem;
+        color: #d9d9d9;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+    .about_me_popup .about_me_footer_chip i { color: #ff8ec4; }
+    @media (max-width: 480px) {
+        .about_me_popup .about_me_grid { grid-template-columns: 1fr; }
+        .about_me_popup { padding: 24px 20px; }
+    }
+</style>
+                        	                <style>
+.slideTrack_native{appearance:none;-webkit-appearance:none;flex:1 1 220px;min-width:160px;height:6px;margin:0 10px;border-radius:999px;background:linear-gradient(90deg,#fff 0%,#fff 0%,rgba(255,255,255,.28) 0%,rgba(255,255,255,.28) 100%);outline:none;pointer-events:none}
+.slideTrack_native::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:14px;height:14px;border-radius:50%;border:0;background:#fff;cursor:pointer}
+.slideTrack_native::-moz-range-thumb{width:14px;height:14px;border-radius:50%;border:0;background:#fff;cursor:pointer}
+.slideTrack_native::-moz-range-track{height:6px;border:0;border-radius:999px;background:rgba(255,255,255,.28)}
+#musicName.widget_marquee_container{line-height:1.28em;min-height:1.28em;padding-block:1px}
+#musicName .widget_marquee_content{align-items:center;line-height:1.28em;min-height:1.28em}
+.css_content_container{transition:box-shadow .12s linear,border-color .2s ease}
+</style>
+<div class="audio_container css_content_container reveal active" style="padding: 15px;">
+	                    <div class="audio_main_content">
+	                    <div id="audio_avatar_container">
+                                    <img src="./assets/images/ab67616d0000b2732922307c16bb852a0849bea0.jpg" alt="Audio Image" class="audio_image">
+                                </div>
+                    <div class="audio_content_container">
+                                                    <h1 class="name widget_marquee_container" id="musicName" data-widget-marquee="" data-widget-marquee-observed="1" style="--overflow-offset: 0px;"><span class="widget_marquee_content">anh da quen voi co don</span></h1>
+                                                <div class="flex">
+                            <span class="duration" id="currentTime">0:00</span>
+                            <input type="range" id="slideTrack" class="slideTrack_native" min="0" max="100" step="0.1" value="0" tabindex="-1" aria-readonly="true">
+                            <span style="margin-right: 8px" class="duration" id="totalTime">0:00</span>
+                            <button id="backward">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 51.532 51.532" fill="currentColor" xml:space="preserve"><path d="M6.631 1.963a6.63 6.63 0 0 1 6.631 6.631V23.81a4 4 0 0 1 1-.831l31.27-18.053a3.998 3.998 0 0 1 6 3.464v36.105a4 4 0 0 1-6 3.463l-31.27-18.053a4 4 0 0 1-1-.83v13.863a6.631 6.631 0 0 1-13.262 0V8.594a6.63 6.63 0 0 1 6.631-6.631"></path></svg>
+                            </button>
+                            <button id="playPause">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M15 16h-2V8h2m-4 8H9V8h2m1-6A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg>
+                            </button>
+                            <style>
+                                #backward,
+                                #forward {
+                                    opacity: .35;
+                                    transition: opacity .18s ease, color .18s ease, filter .18s ease, transform .18s ease;
+                                }
+                                #backward.is-available,
+                                #forward.is-available {
+                                    opacity: 1;
+                                    color: #ffffff;
+                                    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.72));
+                                }
+                                #backward.is-available:hover,
+                                #forward.is-available:hover {
+                                    transform: scale(1.05);
+                                }
+                                #backward:disabled,
+                                #forward:disabled {
+                                    opacity: .28;
+                                    filter: none;
+                                }
+                            </style>                            <button id="forward">
+                                <svg style="transform: rotate(180deg)" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.532 51.532" fill="currentColor" xml:space="preserve"><path d="M6.631 1.963a6.63 6.63 0 0 1 6.631 6.631V23.81a4 4 0 0 1 1-.831l31.27-18.053a3.998 3.998 0 0 1 6 3.464v36.105a4 4 0 0 1-6 3.463l-31.27-18.053a4 4 0 0 1-1-.83v13.863a6.631 6.631 0 0 1-13.262 0V8.594a6.63 6.63 0 0 1 6.631-6.631"></path></svg>
+                            </button>
+                        </div>
+	                    </div>
+	                    </div>
+	                    	                        <div class="audio_lyrics_display" data-audio-lyrics-display="">
+	                            <div class="lyrics_list" data-lyrics-list=""></div>
+	                        </div>
+	                    	                </div>
+                    </div>
+    </div>
+
+
+<script>
+    ['contextmenu', 'copy', 'cut', 'dragstart', 'selectstart'].forEach((eventName) => {
+        document.addEventListener(eventName, (event) => event.preventDefault());
+    });
+
+    document.addEventListener('keydown', (event) => {
+        const key = String(event.key || '').toLowerCase();
+        if ((event.ctrlKey || event.metaKey) && ['a', 'c', 's', 'u', 'p'].includes(key)) {
+            event.preventDefault();
+        }
+    });
+</script><script src="./scripts/popper.min.js?v=1.0.1"></script>
+<script src="./scripts/tippy-bundle.umd.min.js?v=1.0.1"></script>
+<script src="./scripts/nouislider.min.js?v=1.0.1" type="text/javascript"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // tooltip
+        tippy('[data-tippy-content]', {
+            theme: 'tooltip_container',
+            arrow: false,
+            allowHTML: true,
+            maxWidth: '92vw',
+            animation: 'scale',
+            delay: [0, 150],
+            onCreate(instance) {
+                if (instance.reference?.getAttribute('data-tippy-content') === 'Love') {
+                    instance.popper.classList.add('lop_tippy');
+                }
+            },
+        });
+    });
+        function copyTextFromParent(parentElement) {
+        const paragraph = parentElement.querySelector('p');
+
+        if (paragraph) {
+            const textToCopy = paragraph.textContent;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+
+            textarea.select();
+            document.execCommand('copy');
+
+            document.body.removeChild(textarea);
+
+            showSuccessPopup('Text copied ' + textToCopy);
+        } else {
+            showErrorPopup('Something went wrong!');
+        }
+    }
+    function revealElements() {
+        const reveals = document.querySelectorAll('.reveal');
+        for (let i = 0; i < reveals.length; i++) {
+            reveals[i].classList.add('active');
+        }
+    }
+    const background = document.getElementById('background');
+    </script>
+<script>
+    function adjustChildPosition() {
+        const parent = document.querySelector('.css_content_container');
+        const child = document.querySelector('.bio_small_infomation');
+        const styles = window.getComputedStyle(parent);
+        const borderRadius = parseFloat(styles.borderRadius);
+        const bottom = 12 + 0.16 * (borderRadius - 25);
+        const left = 15 + 0.16 * (borderRadius - 25);
+        child.style.bottom = `${bottom}px`;
+        child.style.left = `${left}px`;
+    }
+    adjustChildPosition();
+</script>
+<script>
+    function revealAudioLike() {
+        const revealsAudio = document.querySelector('.revealAudioLike');
+        revealsAudio.classList.add('active');
+    }
+    revealAudioLike()
+    
+</script>
+<script type="importmap">
+{
+  "imports": {
+    "firebase/app": "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js"
+  }
+}
+</script>
+<script type="module">
+    import { initProfileCounters } from './src/features/profileCounters.js';
+
+    initProfileCounters();
+</script>
+<script src="./scripts/jquery-3.6.0.min.js" type="text/javascript"></script>
+<script src="./scripts/tilt.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        var selector = ".bio_content_container";
+        $(selector).each(function () {
+            var $el = $(this);
+            var height = $el.outerHeight();
+            var perspective = Math.max(Math.round(height * 0.7), 350);
+            $el.tilt({
+                maxTilt: 7,
+                speed: 1200,
+                perspective: perspective,
+                easing: 'cubic-bezier(.03,.98,.52,.99)',
+            });
+        });
+    });
+</script>
+<script>
+    function hideOverlay() {
+        const audio = document.getElementById('audio');
+        const overlay = document.querySelector('.overlay_audio');
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 300);
+        revealElements();
+
+        if (!window.zyoCardBorderVisualizerStarted && window.AudioContext && audio) {
+            window.zyoCardBorderVisualizerStarted = true;
+            const visualizerBorders = document.querySelectorAll('.css_content_container');
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            const analyser = audioCtx.createAnalyser();
+            const source = audioCtx.createMediaElementSource(audio);
+            source.connect(analyser);
+            analyser.connect(audioCtx.destination);
+
+            const frequencyData = new Uint8Array(analyser.frequencyBinCount);
+            analyser.fftSize = 2048;
+            analyser.minDecibels = -90;
+            analyser.maxDecibels = -10;
+            analyser.smoothingTimeConstant = 0.75;
+
+            function renderVisualizer() {
+                requestAnimationFrame(renderVisualizer);
+                analyser.getByteFrequencyData(frequencyData);
+                const averageFrequency = frequencyData.reduce((a, b) => a + b, 0) / frequencyData.length;
+                const maxGlow = 400;
+                const currentGlow = Math.max(0, (averageFrequency / 400) * maxGlow);
+
+                visualizerBorders.forEach(border => {
+                    border.style.boxShadow = `0 0 ${currentGlow}px ${currentGlow * 0.3}px #333333`;
+                });
+            }
+
+            audio.addEventListener('play', () => {
+                audioCtx.resume().then(renderVisualizer);
+            }, { once: true });
+        }
+                                                                const playlist = [
+                                        { src: "./assets/audio/335368cbd866b945f8cad6d107457247.mp3", title: "Anh da quen voi co don", totalDuration: "3:55", audioImage: "./assets/images/ab67616d0000b2732922307c16bb852a0849bea0.jpg", hasLyrics: true, lyrics: {"source":"lrc","track":"assets/lyrics/4c5fe6fd65b0ce4150b199a49eb7742e.lrc","synced":""} },
+                                        { src: "./assets/audio/YTDown_YouTube_06-Chi-Mot-Dem-Nua-Thoi-RPT-MCK-ft-tlinh_Media_5WkwBKu1le0_009_128k.mp3", title: "Chi mot dem nua thoi", totalDuration: "0:00", audioImage: "./assets/images/artworks-vQtYeZ3ZpfBu2syr-hF5sQg-t500x500.jpg", hasLyrics: true, lyrics: {"source":"lrc","track":"assets/lyrics/2b73a5c68514da0aa51669f56b7a9ee7.lrc","synced":""} },
+                                        { src: "./assets/audio/YTDown_YouTube_Cho-Anh-Mot-Chut-Hy-Vong-Haukong-ft-Flym_Media_Ldd-f7u1nhU_009_128k.mp3", title: "Cho anh mot chut hy vong", totalDuration: "0:00", audioImage: "./assets/images/sddefault.jpg", hasLyrics: true, lyrics: {"source":"lrc","track":"assets/lyrics/526f5ab9cacf03596ca1c8903d1361cb.lrc","synced":""} },
+                                    ];
+                                let currentTrackIndex = 0;
+
+                function updatePlaylistButtons() {
+                    const hasPreviousTrack = currentTrackIndex > 0;
+                    const hasNextTrack = currentTrackIndex < playlist.length - 1;
+
+                    backwardButton.disabled = !hasPreviousTrack;
+                    forwardButton.disabled = !hasNextTrack;
+                    backwardButton.classList.toggle('is-available', hasPreviousTrack);
+                    forwardButton.classList.toggle('is-available', hasNextTrack);
+                    backwardButton.setAttribute('aria-disabled', String(!hasPreviousTrack));
+                    forwardButton.setAttribute('aria-disabled', String(!hasNextTrack));
+                }
+
+                function playTrack(index) {
+                    if (index >= 0 && index < playlist.length) {
+                        if (window.zyoAudioLyricsRequired && !playlist[index].hasLyrics) return;
+                        currentTrackIndex = index;
+                        audio.src = new URL(playlist[index].src, window.location.href).href;
+                        audio.load();
+                        if (typeof zyoSetCurrentAudioLyrics === 'function') zyoSetCurrentAudioLyrics(playlist[index]);
+                        const playPromise = audio.play();
+                        if (playPromise && typeof playPromise.catch === 'function') {
+                            playPromise.catch(() => {});
+                        }
+                                                    const musicName = document.getElementById('musicName');
+                            const totalTimeDisplay = document.getElementById('totalTime');
+                            const audioAvatarContainer = document.getElementById('audio_avatar_container');
+                            if(playlist[index].audioImage){
+                                audioAvatarContainer.innerHTML = 
+                                `
+                                    <img src="${playlist[index].audioImage}" alt="Audio Image" class="audio_image">
+                                `
+                            } else {
+                                audioAvatarContainer.innerHTML = 
+                                `
+                                    <svg class="audio_image_svg" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+                                        <path id="ignore" d="M406.3 48.2c-4.7.9-202 39.2-206.2 40-4.2.8-8.1 3.6-8.1 8v240.1c0 1.6-.1 7.2-2.4 11.7-3.1 5.9-8.5 10.2-16.1 12.7-3.3 1.1-7.8 2.1-13.1 3.3-24.1 5.4-64.4 14.6-64.4 51.8 0 31.1 22.4 45.1 41.7 47.5 2.1.3 4.5.7 7.1.7 6.7 0 36-3.3 51.2-13.2 11-7.2 24.1-21.4 24.1-47.8V190.5c0-3.8 2.7-7.1 6.4-7.8l152-30.7c5-1 9.6 2.8 9.6 7.8v130.9c0 4.1-.2 8.9-2.5 13.4-3.1 5.9-8.5 10.2-16.2 12.7-3.3 1.1-8.8 2.1-14.1 3.3-24.1 5.4-64.4 14.5-64.4 51.7 0 33.7 25.4 47.2 41.8 48.3 6.5.4 11.2.3 19.4-.9s23.5-5.5 36.5-13c17.9-10.3 27.5-26.8 27.5-48.2V55.9c-.1-4.4-3.8-8.9-9.8-7.7z" fill="currentColor"></path>
+                                    </svg>
+                                `
+                            }
+                            const musicNameText = musicName?.querySelector('.widget_marquee_content') || musicName;
+                            if (musicNameText) {
+                                musicNameText.textContent = playlist[index].title;
+                            }
+                            if (typeof zyoObserveWidgetDescriptionMarquee === 'function') {
+                                zyoObserveWidgetDescriptionMarquee(musicName.parentElement || document);
+                            }
+                            if (typeof zyoUpdateWidgetDescriptionMarquee === 'function') {
+                                zyoUpdateWidgetDescriptionMarquee(musicName.parentElement || document);
+                            }
+                            totalTimeDisplay.textContent = audio.duration ? formatTime(audio.duration) : playlist[index].totalDuration;
+                            updatePlaylistButtons();
+                                            }
+                }
+                audio.addEventListener("ended", () => {
+                    if (currentTrackIndex + 1 < playlist.length) {
+                        playTrack(currentTrackIndex + 1);
+                    } else {
+                        playTrack(0);
+                    }
+                });
+                                    const backwardButton = document.getElementById("backward");
+                    const forwardButton = document.getElementById("forward");
+                    backwardButton.addEventListener("click", () => {
+                        if (currentTrackIndex > 0) {
+                            playTrack(currentTrackIndex - 1);
+                        }
+                    });
+
+                    forwardButton.addEventListener("click", () => {
+                        if (currentTrackIndex + 1 < playlist.length) {
+                            playTrack(currentTrackIndex + 1);
+                        }
+                    });
+                    updatePlaylistButtons();
+                const playPauseButton = document.getElementById("playPause");
+                const currentTimeDisplay = document.getElementById("currentTime");
+                const totalTimeDisplay = document.getElementById("totalTime");
+                const sliderTrack = document.getElementById("slideTrack");
+                let audioSyncTimer = null;
+
+                function formatTime(seconds) {
+                    const safeSeconds = Number.isFinite(seconds) && seconds > 0 ? seconds : 0;
+                    const mins = Math.floor(safeSeconds / 60);
+                    const secs = Math.floor(safeSeconds % 60);
+                    return mins + ":" + (secs < 10 ? "0" + secs : secs);
+                }
+
+                function paintTrack(percent) {
+                    const safePercent = Math.max(0, Math.min(100, Number(percent) || 0));
+                    sliderTrack.value = String(safePercent);
+                    sliderTrack.style.background = "linear-gradient(90deg,#fff 0%,#fff " + safePercent + "%,rgba(255,255,255,.28) " + safePercent + "%,rgba(255,255,255,.28) 100%)";
+                }
+
+                function refreshDuration() {
+                    const duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+                    totalTimeDisplay.textContent = formatTime(duration);
+                }
+
+                function updateTrack() {
+                    const duration = Number.isFinite(audio.duration) && audio.duration > 0 ? audio.duration : 0;
+                    const current = Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
+                    paintTrack(duration ? (current / duration) * 100 : 0);
+                    currentTimeDisplay.textContent = formatTime(current);
+                    zyoUpdateAudioLyricsDisplay(current);
+                }
+
+                function setPlayPauseIcon(isPlaying) {
+                    playPauseButton.innerHTML = isPlaying
+                        ? '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M15 16h-2V8h2m-4 8H9V8h2m1-6A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg>'
+                        : '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M10 16.5v-9l6 4.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg>';
+                }
+
+                function startAudioUiSync() {
+                    window.clearInterval(audioSyncTimer);
+                    updateTrack();
+                    audioSyncTimer = window.setInterval(updateTrack, 100);
+                }
+
+                function stopAudioUiSync() {
+                    window.clearInterval(audioSyncTimer);
+                    updateTrack();
+                }
+
+                playPauseButton.addEventListener("click", () => {
+                    if (audio.paused) {
+                        if (!audio.currentSrc) {
+                            playTrack(currentTrackIndex);
+                            return;
+                        }
+                        const playPromise = audio.play();
+                        if (playPromise && typeof playPromise.catch === "function") {
+                            playPromise.catch(() => {});
+                        }
+                    } else {
+                        audio.pause();
+                    }
+                });
+
+                document.addEventListener("keydown", (e) => {
+                    if (e.code === "Space") {
+                        playPauseButton.click();
+                    }
+                });
+                document.addEventListener("keydown", (e) => {
+                    if (e.code === "ArrowLeft") {
+                        audio.currentTime = Math.max(0, audio.currentTime - 5);
+                        updateTrack();
+                    }
+                });
+                document.addEventListener("keydown", (e) => {
+                    if (e.code === "ArrowRight") {
+                        audio.currentTime += 5;
+                        updateTrack();
+                    }
+                });
+
+                audio.addEventListener("loadedmetadata", () => {
+                    refreshDuration();
+                    updateTrack();
+                });
+                audio.addEventListener("durationchange", refreshDuration);
+                audio.addEventListener("play", () => {
+                    setPlayPauseIcon(true);
+                    startAudioUiSync();
+                });
+                audio.addEventListener("pause", () => {
+                    setPlayPauseIcon(false);
+                    stopAudioUiSync();
+                });
+                audio.addEventListener("ended", stopAudioUiSync);
+                audio.addEventListener("timeupdate", updateTrack);
+                audio.addEventListener("seeked", updateTrack);
+
+                refreshDuration();
+                paintTrack(0);
+                updateTrack();
+                playTrack(currentTrackIndex);
+
+                createSlider('slider1', 'sliderValue1', '');
+            // get gia tri de cho viec pause va set value
+            const slider = document.getElementById('slider1').noUiSlider;
+            const inputValue = document.getElementById('sliderValue1');
+            const svgVolumn = document.getElementById("volumeIcon");
+            const mask = svgVolumn.querySelector('#changeMask');
+            const defs = svgVolumn.querySelector("defs");
+            // xu li thanh volumn slider
+            slider.on('update', function (values, handle) {
+                const volumeValue = parseFloat(values[handle]);
+
+                audio.volume = volumeValue / 100;
+
+                if (volumeValue === 0) {
+                    defs.innerHTML = `
+                    <mask id="volumeMute"><mask id="volumeMute1" width="13" height="13" x="30" y="18" maskUnits="userSpaceOnUse" style="mask-type: alpha;"><path d="M30 18h13v13H30z"/></mask><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><g stroke-linecap="round" mask="url(#volumeMute1)"><path d="m40.735 20.286l-8.486 8.485m.001-8.485l8.485 8.485"/></g><path fill="#555" d="M24 6v36c-7 0-12.201-9.16-12.201-9.16H6a2 2 0 0 1-2-2V17.01a2 2 0 0 1 2-2h5.799S17 6 24 6Z"/></g></mask>
+                    `;
+                    mask.setAttribute("mask", "url(#volumeMute)");
+                } else {
+                    defs.innerHTML = `
+                    <mask id="volumeMedium"><g fill="none" stroke="#fff" stroke-width="4"><path fill="#555" stroke-linejoin="round" d="M24 6v36c-7 0-12.201-9.16-12.201-9.16H6a2 2 0 0 1-2-2V17.01a2 2 0 0 1 2-2h5.799S17 6 24 6Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M32 15a12 12 0 0 1 1.684 1.859A12.07 12.07 0 0 1 36 24c0 2.654-.846 5.107-2.278 7.09A12 12 0 0 1 32 33"/><path stroke-linecap="round" d="M34.236 41.186C40.084 37.696 44 31.305 44 24c0-7.192-3.796-13.496-9.493-17.02"/></g></mask>
+                    `;
+                    mask.setAttribute("mask", "url(#volumeMedium)");
+                }
+            });
+            // xu li audio pause va play
+            let previousSliderValue = 100;
+            svgVolumn.addEventListener("click", function () {
+                if (inputValue.value == 0) {
+                    slider.set(previousSliderValue);
+                    inputValue.value = previousSliderValue;
+
+                    defs.innerHTML = `
+                    <mask id="volumeMedium"><g fill="none" stroke="#fff" stroke-width="4"><path fill="#555" stroke-linejoin="round" d="M24 6v36c-7 0-12.201-9.16-12.201-9.16H6a2 2 0 0 1-2-2V17.01a2 2 0 0 1 2-2h5.799S17 6 24 6Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M32 15a12 12 0 0 1 1.684 1.859A12.07 12.07 0 0 1 36 24c0 2.654-.846 5.107-2.278 7.09A12 12 0 0 1 32 33"/><path stroke-linecap="round" d="M34.236 41.186C40.084 37.696 44 31.305 44 24c0-7.192-3.796-13.496-9.493-17.02"/></g></mask>
+                    `;
+                    mask.setAttribute("mask", "url(#volumeMedium)");
+                } else {
+                    previousSliderValue = parseFloat(inputValue.value);
+
+                    inputValue.value = '0';
+                    slider.set(0);
+
+                    defs.innerHTML = `
+                    <mask id="volumeMute"><mask id="volumeMute1" width="13" height="13" x="30" y="18" maskUnits="userSpaceOnUse" style="mask-type: alpha;"><path d="M30 18h13v13H30z"/></mask><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><g stroke-linecap="round" mask="url(#volumeMute1)"><path d="m40.735 20.286l-8.486 8.485m.001-8.485l8.485 8.485"/></g><path fill="#555" d="M24 6v36c-7 0-12.201-9.16-12.201-9.16H6a2 2 0 0 1-2-2V17.01a2 2 0 0 1 2-2h5.799S17 6 24 6Z"/></g></mask>
+                    `;
+                    mask.setAttribute("mask", "url(#volumeMute)");
+                }
+            });
+            }
+    audio.volume = 1;
+</script>
+<script defer="">
+    const zyoAnalyticsConfig = {
+        endpoint: "",
+        profileUserId: 0,
+        viewerUserId: 0,
+        referrer: null,
+        timestamp: "0",
+        signatures: {}};
+
+    function zyoNormalizeAnalyticsEndpoint(rawEndpoint) {
+        const value = String(rawEndpoint || '').trim();
+        if (!value) {
+            return null;
+        }
+
+        try {
+            const url = new URL(value, window.location.origin);
+            url.pathname = url.pathname.replace(/\/{2,}/g, '/');
+            return url.toString();
+        } catch (error) {
+            return value.replace(/([^:]\/)\/+/g, '$1');
+        }
+    }
+
+    const zyoAnalyticsQueue = new Map();
+    const zyoAnalyticsTrackedKeys = new Set();
+    let zyoAnalyticsFlushTimer = null;
+
+    function zyoAnalyticsEventKey(eventType, targetType, targetId) {
+        return [eventType, targetType || '', targetId || ''].join('|');
+    }
+
+    function zyoSendAnalyticsBatch(events, useBeacon = false) {
+        if (!Array.isArray(events) || events.length === 0 || !navigator.sendBeacon && !window.fetch) {
+            return;
+        }
+
+        const payload = JSON.stringify({
+            profile_user_id: zyoAnalyticsConfig.profileUserId,
+            viewer_user_id: zyoAnalyticsConfig.viewerUserId,
+            timestamp: zyoAnalyticsConfig.timestamp,
+            events: events,
+            signatures: zyoAnalyticsConfig.signatures
+        });
+
+        const analyticsEndpoint = zyoNormalizeAnalyticsEndpoint(zyoAnalyticsConfig.endpoint);
+        if (!analyticsEndpoint) return;
+
+        if (useBeacon && navigator.sendBeacon) {
+            const blob = new Blob([payload], { type: 'application/json' });
+            if (navigator.sendBeacon(analyticsEndpoint, blob)) {
+                return;
+            }
+        }
+
+        fetch(analyticsEndpoint, {
+            method: 'POST',
+            keepalive: true,
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Timestamp': zyoAnalyticsConfig.timestamp,
+                'X-Sign': zyoAnalyticsConfig.signatures.profile_view || ''
+            },
+            body: payload
+        }).catch(() => {});
+    }
+
+    function zyoFlushAnalyticsQueue(useBeacon = false) {
+        if (zyoAnalyticsFlushTimer) {
+            clearTimeout(zyoAnalyticsFlushTimer);
+            zyoAnalyticsFlushTimer = null;
+        }
+        const events = Array.from(zyoAnalyticsQueue.values()).slice(0, 40);
+        zyoAnalyticsQueue.clear();
+        zyoSendAnalyticsBatch(events, useBeacon);
+    }
+
+    function zyoQueueAnalyticsEvent(eventType, targetType = '', targetId = '', metadata = {}, flushDelay = 3500) {
+        if (!zyoAnalyticsConfig.signatures[eventType]) {
+            return;
+        }
+
+        const safeTargetId = String(targetId || '').slice(0, 180);
+        const key = zyoAnalyticsEventKey(eventType, targetType, safeTargetId);
+        if (zyoAnalyticsTrackedKeys.has(key)) {
+            return;
+        }
+        zyoAnalyticsTrackedKeys.add(key);
+
+        const current = zyoAnalyticsQueue.get(key);
+        if (current) {
+            return;
+        }
+
+        zyoAnalyticsQueue.set(key, {
+            event_type: eventType,
+            target_type: String(targetType || '').slice(0, 60),
+            target_id: safeTargetId,
+            event_count: 1,
+            metadata: metadata || {}
+        });
+
+        if (zyoAnalyticsQueue.size >= 20) {
+            zyoFlushAnalyticsQueue(false);
+            return;
+        }
+
+        if (flushDelay <= 0) {
+            zyoFlushAnalyticsQueue(false);
+            return;
+        }
+
+        if (!zyoAnalyticsFlushTimer) {
+            zyoAnalyticsFlushTimer = setTimeout(() => zyoFlushAnalyticsQueue(false), flushDelay);
+        }
+    }
+
+    function zyoTrackAnalyticsEvent(eventType, targetType = '', targetId = '', metadata = {}) {
+        zyoQueueAnalyticsEvent(eventType, targetType, targetId, metadata);
+    }
+
+    let zyoProfileViewTracked = false;
+    function zyoTrackProfileView() {
+        if (zyoProfileViewTracked) return;
+        zyoProfileViewTracked = true;
+        zyoQueueAnalyticsEvent('profile_view', 'profile', String(zyoAnalyticsConfig.profileUserId), {
+            referrer: zyoAnalyticsConfig.referrer
+        }, 1200);
+    }
+
+    function zyoAnalyticsWidgetFromElement(targetElement) {
+        return targetElement ? targetElement.closest('.zyo_profile_widget, .widget_profile_container, .bio_widgets_grid .css_content_container') : null;
+    }
+
+    function zyoAnalyticsWidgetType(widget) {
+        if (!widget) return '';
+        return String(widget.dataset.profileWidgetType || widget.dataset.widgetType || widget.dataset.bioWidgetType || widget.className || 'widget').slice(0, 120);
+    }
+
+    function zyoTrackAnalyticsLink(targetElement, targetType = 'link') {
+        if (!targetElement) return;
+
+        let href = '';
+        if (targetElement.matches('a[href]')) {
+            href = targetElement.getAttribute('href') || '';
+        } else {
+            const socialParent = targetElement.closest('button.svg_item, .svg_item, .svg_text, .socialText, .social_text, [data-social-url], [data-analytics-href], [onclick*="openPopupPreview"]');
+            const sourceElement = socialParent || targetElement;
+            const hiddenText = targetElement.matches('.svg_text, .socialText, .social_text')
+                ? targetElement
+                : sourceElement.querySelector('.svg_text, .socialText, .social_text');
+            const onclickValue = [
+                targetElement.getAttribute('onclick'),
+                sourceElement.getAttribute('onclick')
+            ].filter(Boolean).join(' ');
+            const popupLink = onclickValue.match(/openPopupPreview\(['"](.+?)['"]\)/);
+            href = targetElement.dataset.analyticsHref
+                || targetElement.dataset.socialUrl
+                || sourceElement.dataset.analyticsHref
+                || sourceElement.dataset.socialUrl
+                || (popupLink ? popupLink[1] : '')
+                || targetElement.getAttribute('data-tippy-content')
+                || sourceElement.getAttribute('data-tippy-content')
+                || (hiddenText ? hiddenText.textContent : '')
+                || '';
+        }
+
+        href = String(href).trim();
+        if (!href || href.startsWith('#') || href.startsWith('javascript:')) {
+            return;
+        }
+
+        const isDiscordProfile = href.includes('discord.com/users/');
+        const widget = zyoAnalyticsWidgetFromElement(targetElement);
+        const finalTargetType = widget && targetType === 'link' ? 'widget_link' : targetType;
+        zyoTrackAnalyticsEvent(isDiscordProfile ? 'discord_profile_click' : 'link_click', finalTargetType, href, {
+            widget_type: widget ? zyoAnalyticsWidgetType(widget) : ''
+        });
+    }
+
+    document.addEventListener('click', function(event) {
+        let trackedPrimaryClick = false;
+        const widget = zyoAnalyticsWidgetFromElement(event.target);
+        const anchor = event.target.closest('a[href]');
+        if (anchor) {
+            zyoTrackAnalyticsLink(anchor, widget ? 'widget_link' : 'link');
+            trackedPrimaryClick = true;
+        } else {
+            const socialButton = event.target.closest('button.svg_item, .svg_item, .svg_text, .socialText, .social_text, [data-social-url], [data-analytics-href], [onclick*="openPopupPreview"]');
+            if (socialButton) {
+                zyoTrackAnalyticsLink(socialButton, 'social');
+                trackedPrimaryClick = true;
+            }
+        }
+
+        if (widget && !trackedPrimaryClick) {
+            const service = zyoAnalyticsWidgetType(widget);
+            zyoTrackAnalyticsEvent('widget_click', 'widget', String(service).slice(0, 120));
+        }
+
+        if (event.target.closest('[data-second-tab], .second_tab, .second-tab')) {
+            zyoTrackAnalyticsEvent('second_tab_open', 'second_tab', 'open');
+        }
+    }, { passive: true });
+
+    document.querySelectorAll('audio').forEach((audio) => {
+        audio.addEventListener('play', function() {
+            if (audio.dataset.analyticsPlayed === '1') return;
+            audio.dataset.analyticsPlayed = '1';
+            zyoTrackAnalyticsEvent('audio_play', 'audio', audio.currentSrc || audio.src || 'audio');
+        }, { passive: true });
+    });
+
+    window.addEventListener('pagehide', () => zyoFlushAnalyticsQueue(true));
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+            zyoFlushAnalyticsQueue(true);
+        }
+    });
+
+            const zyoOverlayAudio = document.querySelector('.overlay_audio');
+        if (zyoOverlayAudio) {
+            zyoOverlayAudio.addEventListener('click', function(){
+            if (false) fetch("", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Timestamp': '0',
+                    'X-Sign': 'example-signature',
+                },
+                body: JSON.stringify({ 
+                    user_id: 0, 
+                    user_view: 0, 
+                    referrer: '' 
+                }),
+            });
+            zyoTrackProfileView();
+            });
+        }
+    </script>
+<style>
+    .text_effect_5 {
+        color: #f8f8f8;
+        background: linear-gradient(90deg, transparent, var(---nameColor), transparent);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        animation: shine_effect 2s linear infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: var(--nameColor25);
+        background-clip: text;
+    }
+    /* shine */
+    .text_effect_3 {
+        overflow: hidden;
+        background: linear-gradient(90deg, #000, var(--nameColor), var(--nameColor), #000);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        animation: shine_effect 2s linear infinite;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    }
+</style>
+    <script>
+        function zyoWidgetMarqueeContent(container) {
+            if (container.matches?.('[data-widget-marquee]')) {
+                return container.querySelector('.widget_marquee_content');
+            }
+
+            return container.classList.contains('widget_name_container')
+                ? container.querySelector('.widget_name')
+                : container.querySelector('.widget_description');
+        }
+
+        function zyoWidgetMarqueeSelector() {
+            return '.widget_description_container, .widget_name_container, [data-widget-marquee]';
+        }
+
+        function zyoUpdateGithubContributionScale(root = document) {
+            root.querySelectorAll?.('.github_contrib_graph').forEach((graph) => {
+                const scaleTarget = graph.querySelector('.github_contrib_graph_scale');
+                if (!scaleTarget) {
+                    return;
+                }
+
+                window.requestAnimationFrame(() => {
+                    const fullWidth = scaleTarget.scrollWidth;
+                    const availableWidth = graph.clientWidth;
+                    const scale = fullWidth > 0 && availableWidth > 0 ? Math.min(1, availableWidth / fullWidth) : 1;
+                    graph.style.setProperty('--github-contrib-scale', String(Math.max(.55, scale)));
+                });
+            });
+        }
+
+        function zyoUpdateWidgetDescriptionMarquee(root = document) {
+            root.querySelectorAll?.(zyoWidgetMarqueeSelector()).forEach((container) => {
+                const content = zyoWidgetMarqueeContent(container);
+                if (!content) {
+                    return;
+                }
+
+                window.requestAnimationFrame(() => {
+                    const overflowOffset = Math.ceil(content.scrollWidth - container.clientWidth);
+                    if (overflowOffset <= 0) {
+                        if (container.classList.contains('is-marquee')) {
+                            container.classList.remove('is-marquee');
+                        }
+                        container.style.setProperty('--overflow-offset', '0px');
+                        return;
+                    }
+
+                    container.style.setProperty('--overflow-offset', `${overflowOffset}px`);
+                    container.style.setProperty('--widget-marquee-duration', '8s');
+                    if (!container.classList.contains('is-marquee')) {
+                        container.classList.add('is-marquee');
+                    }
+                });
+            });
+
+            zyoUpdateGithubContributionScale(root);
+        }
+
+        function zyoObserveWidgetDescriptionMarquee(root = document) {
+            if (!window.ResizeObserver) {
+                return;
+            }
+
+            if (!window.zyoWidgetDescriptionResizeObserver) {
+                window.zyoWidgetDescriptionResizeObserver = new ResizeObserver((entries) => {
+                    window.zyoWidgetDescriptionResizeQueue = window.zyoWidgetDescriptionResizeQueue || new Set();
+
+                    entries.forEach((entry) => {
+                        const target = entry.target;
+                        const container = target.matches?.(zyoWidgetMarqueeSelector())
+                            ? target
+                            : target.closest?.(zyoWidgetMarqueeSelector());
+
+                        if (container) {
+                            window.zyoWidgetDescriptionResizeQueue.add(container);
+                        }
+                    });
+
+                    window.cancelAnimationFrame(window.zyoWidgetDescriptionResizeFrame);
+                    window.zyoWidgetDescriptionResizeFrame = window.requestAnimationFrame(() => {
+                        window.zyoWidgetDescriptionResizeQueue.forEach((container) => {
+                            zyoUpdateWidgetDescriptionMarquee(container.parentElement || container);
+                        });
+                        window.zyoWidgetDescriptionResizeQueue.clear();
+                    });
+                });
+            }
+
+            root.querySelectorAll?.(zyoWidgetMarqueeSelector()).forEach((container) => {
+                if (container.dataset.widgetMarqueeObserved === '1') {
+                    return;
+                }
+
+                const content = zyoWidgetMarqueeContent(container);
+                window.zyoWidgetDescriptionResizeObserver.observe(container);
+                if (content) {
+                    window.zyoWidgetDescriptionResizeObserver.observe(content);
+                }
+                container.dataset.widgetMarqueeObserved = '1';
+            });
+
+            root.querySelectorAll?.('.github_contrib_graph').forEach((graph) => {
+                if (graph.dataset.githubContribObserved === '1') {
+                    return;
+                }
+
+                window.zyoWidgetDescriptionResizeObserver.observe(graph);
+                const scaleTarget = graph.querySelector('.github_contrib_graph_scale');
+                if (scaleTarget) {
+                    window.zyoWidgetDescriptionResizeObserver.observe(scaleTarget);
+                }
+                graph.dataset.githubContribObserved = '1';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            zyoObserveWidgetDescriptionMarquee();
+            zyoUpdateWidgetDescriptionMarquee();
+        });
+
+        window.addEventListener('load', () => {
+            zyoObserveWidgetDescriptionMarquee();
+            zyoUpdateWidgetDescriptionMarquee();
+        });
+
+        window.addEventListener('resize', () => {
+            window.clearTimeout(window.zyoWidgetDescriptionResizeTimer);
+            window.zyoWidgetDescriptionResizeTimer = window.setTimeout(() => {
+                zyoUpdateWidgetDescriptionMarquee();
+            }, 120);
+        });
+
+        
+        function zyoFormatDiscordActivityElapsed(totalSeconds) {
+            const seconds = Math.max(0, Math.floor(totalSeconds));
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const remainingSeconds = seconds % 60;
+            const pad = (value) => String(value).padStart(2, '0');
+
+            return `${pad(hours)}:${pad(minutes)}:${pad(remainingSeconds)}`;
+        }
+
+        function zyoUpdateDiscordActivityTimers(root = document) {
+            root.querySelectorAll?.('[data-discord-activity-started-at]').forEach((item) => {
+                const startedAt = Number(item.dataset.discordActivityStartedAt || 0);
+                const text = item.querySelector('.discord_presence_activity_time');
+
+                if (!startedAt || !text) {
+                    return;
+                }
+
+                text.textContent = zyoFormatDiscordActivityElapsed((Date.now() / 1000) - startedAt);
+            });
+        }
+
+        function zyoStartDiscordActivityTimers() {
+            zyoUpdateDiscordActivityTimers();
+
+            if (window.zyoDiscordActivityTimerInterval) {
+                return;
+            }
+
+            window.zyoDiscordActivityTimerInterval = window.setInterval(() => {
+                zyoUpdateDiscordActivityTimers();
+            }, 1000);
+        }
+
+        document.addEventListener('DOMContentLoaded', zyoStartDiscordActivityTimers);
+        window.addEventListener('load', zyoStartDiscordActivityTimers);
+
+        function zyoActivateInjectedReveal(root) {
+            if (!root) {
+                return;
+            }
+
+            if (root.classList && root.classList.contains('reveal')) {
+                root.classList.add('active');
+            }
+
+            root.querySelectorAll?.('.reveal').forEach((item) => {
+                item.classList.add('active');
+            });
+        }
+    </script>
+			<script>
+    const titleText = "mquanprofile";
+        let index = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            if (isDeleting) {
+                document.title = titleText.substring(0, index);
+                index--;
+            } else {
+                document.title = titleText.substring(0, index + 1);
+                index++;
+            }
+
+            if (!isDeleting && index === titleText.length) {
+                isDeleting = true;
+                setTimeout(typeWriter, 0);
+                return;
+            } else if (isDeleting && index === 0) {
+                isDeleting = false;
+                setTimeout(typeWriter, 0);
+                return;
+            }
+
+            const speed = isDeleting ? 350 : 350;
+            setTimeout(typeWriter, speed);
+        }
+
+        window.onload = typeWriter;
+</script>
+<script>
+    function openPopupPreview(link){
+        const linkPreview = document.getElementById('link_preview');
+        const linkPreviewButton = document.getElementById('link_preview_button');
+        linkPreview.value = link
+        linkPreviewButton.href = link
+        linkPreviewButton.target = '_blank'
+        linkPreviewButton.rel = 'noopener noreferrer'
+        openPopup('link_preview_container');
+    }
+</script>
+<script src="./scripts/text-effect.js?v=1.0.4" type="text/javascript"></script>
+<script>
+    var userName = document.getElementById('userName');
+    if (typeof typeWriterEffect === 'function') typeWriterEffect('userName', "Nguyễn Minh Quân");
+    if (typeof textWaveEffectDescription === 'function') textWaveEffectDescription('#bio_description');
+</script>
+<script>
+    function canvasCursor(options = {}) {
+        const color = options.color || '#666565';
+        const zIndex = String(options.zIndex || 100);
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return { destroy() {} };
+
+        Object.assign(canvas.style, {
+            top: '0px',
+            left: '0px',
+            pointerEvents: 'none',
+            zIndex,
+            position: 'fixed'
+        });
+        document.body.appendChild(canvas);
+
+        const pointer = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+        const settings = { friction: .5, trails: 20, size: 50, dampening: .2, tension: .98 };
+        const trails = [];
+        let raf = null;
+
+        function resize() {
+            canvas.width = window.innerWidth - 20;
+            canvas.height = window.innerHeight;
+        }
+
+        function Trail(index) {
+            this.spring = .4 + index / settings.trails * .025 + .1 * Math.random() - .02;
+            this.friction = settings.friction + .01 * Math.random() - .002;
+            this.nodes = Array.from({ length: settings.size }, () => ({ x: pointer.x, y: pointer.y, vx: 0, vy: 0 }));
+        }
+
+        Trail.prototype.update = function () {
+            let spring = this.spring;
+            let node = this.nodes[0];
+            node.vx += (pointer.x - node.x) * spring;
+            node.vy += (pointer.y - node.y) * spring;
+
+            for (let i = 0; i < this.nodes.length; i++) {
+                node = this.nodes[i];
+                if (i > 0) {
+                    const prev = this.nodes[i - 1];
+                    node.vx += (prev.x - node.x) * spring;
+                    node.vy += (prev.y - node.y) * spring;
+                    node.vx += prev.vx * settings.dampening;
+                    node.vy += prev.vy * settings.dampening;
+                }
+                node.vx *= this.friction;
+                node.vy *= this.friction;
+                node.x += node.vx;
+                node.y += node.vy;
+                spring *= settings.tension;
+            }
+        };
+
+        Trail.prototype.draw = function () {
+            let x = this.nodes[0].x;
+            let y = this.nodes[0].y;
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            for (let i = 1; i < this.nodes.length - 2; i++) {
+                const node = this.nodes[i];
+                const next = this.nodes[i + 1];
+                x = (node.x + next.x) * .5;
+                y = (node.y + next.y) * .5;
+                ctx.quadraticCurveTo(node.x, node.y, x, y);
+            }
+            const penultimate = this.nodes[this.nodes.length - 2];
+            const last = this.nodes[this.nodes.length - 1];
+            ctx.quadraticCurveTo(penultimate.x, penultimate.y, last.x, last.y);
+            ctx.stroke();
+            ctx.closePath();
+        };
+
+        function onMove(event) {
+            pointer.x = event.touches ? event.touches[0].pageX : event.clientX;
+            pointer.y = event.touches ? event.touches[0].pageY : event.clientY;
+        }
+
+        function loop() {
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.globalCompositeOperation = 'lighter';
+            ctx.strokeStyle = color;
+            ctx.globalAlpha = .2;
+            ctx.lineWidth = 1;
+            trails.forEach((trail) => {
+                trail.update();
+                trail.draw();
+            });
+            raf = requestAnimationFrame(loop);
+        }
+
+        for (let i = 0; i < settings.trails; i++) trails.push(new Trail(i));
+        resize();
+        document.addEventListener('mousemove', onMove, { passive: true });
+        document.addEventListener('touchmove', onMove, { passive: true });
+        window.addEventListener('resize', resize);
+        loop();
+
+        return {
+            destroy() {
+                cancelAnimationFrame(raf);
+                document.removeEventListener('mousemove', onMove);
+                document.removeEventListener('touchmove', onMove);
+                window.removeEventListener('resize', resize);
+                canvas.remove();
+            }
+        };
+    }
+
+    const cursorEffect = canvasCursor({ color: '#666565', zIndex: 100 });
+</script>
+<!--  -->
+<style id="zyo-mobile-fix">
+    html,
+    body {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden !important;
+    }
+
+    body {
+        padding-left: env(safe-area-inset-left, 0px);
+        padding-right: env(safe-area-inset-right, 0px);
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    img,
+    svg,
+    video,
+    canvas {
+        max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .profile-body-1 {
+            min-height: 100svh !important;
+            height: auto !important;
+            overflow-y: auto !important;
+            padding: 14px 0 24px !important;
+        }
+
+        .bio-container {
+            width: min(96vw, 680px) !important;
+            max-width: calc(100vw - 12px) !important;
+            margin-inline: auto !important;
+            padding: 0 !important;
+        }
+
+        .bio_content_container {
+            gap: 10px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        .content-container,
+        .audio_container,
+        .content {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+        }
+
+        .content-container {
+            padding: 24px 22px 52px !important;
+            overflow: hidden !important;
+        }
+
+        .top.cardLeft .img_container {
+            left: 0 !important;
+        }
+
+        .top.cardLeft.infoRow {
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            gap: 12px !important;
+        }
+
+        .img_container {
+            width: clamp(128px, 32vw, 168px) !important;
+            height: clamp(128px, 32vw, 168px) !important;
+            flex: 0 0 auto !important;
+        }
+
+        .img_container .img_effect {
+            width: 132% !important;
+            max-width: 132% !important;
+            max-height: 132% !important;
+        }
+
+        .flex-column {
+            min-width: 0 !important;
+            flex: 1 1 auto !important;
+            gap: 5px !important;
+        }
+
+        .flex-column .flex {
+            flex-wrap: wrap !important;
+            align-items: center !important;
+            gap: 5px !important;
+            row-gap: 4px !important;
+        }
+
+        #userName {
+            max-width: 100% !important;
+            font-size: clamp(2.8rem, 8vw, 3.8rem) !important;
+            line-height: 1.08em !important;
+            margin-left: 0 !important;
+            margin-bottom: 0 !important;
+            overflow-wrap: anywhere !important;
+        }
+
+        .badge_container {
+            padding: 5px 8px !important;
+            border-radius: 12px !important;
+        }
+
+        .bio_description {
+            max-width: 100% !important;
+            margin-left: 0 !important;
+            font-size: clamp(1.35rem, 4vw, 1.65rem) !important;
+            line-height: 1.3em !important;
+            overflow-wrap: anywhere !important;
+        }
+
+        .svg_container {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 4px !important;
+            row-gap: 4px !important;
+            max-width: 100% !important;
+        }
+
+        .svg_container .svg_item {
+            flex: 0 0 auto !important;
+            padding: 5px 6px !important;
+            font-size: 2.35rem !important;
+        }
+
+        .bio_small_infomation {
+            max-width: calc(100% - 24px) !important;
+            left: 12px !important;
+            bottom: 10px !important;
+            flex-wrap: wrap !important;
+            gap: 7px !important;
+            row-gap: 4px !important;
+        }
+
+        .bio_small_infomation .bio_infomation .text {
+            font-size: 1.15rem !important;
+        }
+
+        .flex_discord {
+            width: 100% !important;
+            margin-top: 12px !important;
+            gap: 8px !important;
+        }
+
+        .widget_container.discord_presence_widget,
+        .widget_container.discord_presence_widget .widget_content {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+        }
+
+        .widget_container.discord_presence_widget .widget_content {
+            padding: 8px !important;
+            gap: 8px !important;
+            border-radius: 18px !important;
+        }
+
+        .widget_avatar_container {
+            flex: 0 0 auto !important;
+        }
+
+        .widget_avatar.discord_presence_avatar {
+            width: 78px !important;
+            height: 78px !important;
+        }
+
+        .discord_presence_avatar_effect {
+            width: 132% !important;
+            height: 132% !important;
+        }
+
+        .widget_text_container,
+        .widget_text_inner,
+        .widget_name_container,
+        .widget_description_container {
+            min-width: 0 !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
+        }
+
+        .widget_tag_flex {
+            min-width: 0 !important;
+            gap: 6px !important;
+        }
+
+        .widget_name.discord_presence_name,
+        .widget_discord_name_link.discord_presence_name {
+            max-width: 100% !important;
+            font-size: clamp(1.45rem, 4.5vw, 1.85rem) !important;
+            line-height: 1.1em !important;
+            filter: drop-shadow(0 0 7px rgba(255, 80, 162, 0.72)) !important;
+        }
+
+        .widget_description,
+        .discord_presence_description {
+            font-size: clamp(1.05rem, 3.3vw, 1.22rem) !important;
+            line-height: 1.25em !important;
+        }
+
+        .discord_presence_view_profile {
+            min-height: 22px !important;
+            padding: 0 9px !important;
+            font-size: 0.95rem !important;
+            border-radius: 7px !important;
+        }
+
+        .audio_container {
+            padding: 12px !important;
+            border-radius: 18px !important;
+        }
+
+        .audio_main_content {
+            display: grid !important;
+            grid-template-columns: 78px minmax(0, 1fr) !important;
+            align-items: center !important;
+            gap: 10px !important;
+        }
+
+        #audio_avatar_container {
+            width: 78px !important;
+            height: 78px !important;
+            flex: 0 0 78px !important;
+        }
+
+        .audio_image {
+            width: 78px !important;
+            height: 78px !important;
+            border-radius: 12px !important;
+        }
+
+        .audio_content_container {
+            min-width: 0 !important;
+            width: 100% !important;
+            overflow: hidden !important;
+        }
+
+        #musicName {
+            max-width: 100% !important;
+            min-height: 1.25em !important;
+            overflow: hidden !important;
+            font-size: clamp(1.9rem, 5.4vw, 2.45rem) !important;
+            line-height: 1.2em !important;
+            margin-bottom: 4px !important;
+        }
+
+        .audio_content_container .flex {
+            display: grid !important;
+            grid-template-columns: auto minmax(0, 1fr) auto !important;
+            column-gap: 5px !important;
+            row-gap: 7px !important;
+            align-items: center !important;
+        }
+
+        .audio_content_container .slideTrack_native {
+            grid-column: 2 / 3 !important;
+            width: 100% !important;
+            min-width: 0 !important;
+            margin: 0 !important;
+        }
+
+        #currentTime {
+            grid-column: 1 / 2 !important;
+            justify-self: start !important;
+        }
+
+        #totalTime {
+            grid-column: 3 / 4 !important;
+            justify-self: end !important;
+            margin-right: 0 !important;
+        }
+
+        #backward {
+            grid-column: 1 / 2 !important;
+            justify-self: start !important;
+        }
+
+        #playPause {
+            grid-column: 2 / 3 !important;
+            justify-self: center !important;
+        }
+
+        #forward {
+            grid-column: 3 / 4 !important;
+            justify-self: end !important;
+        }
+
+        .audio_content_container .duration {
+            font-size: 0.9rem !important;
+            white-space: nowrap !important;
+        }
+
+        .audio_content_container button {
+            width: 32px !important;
+            height: 32px !important;
+            min-width: 32px !important;
+            padding: 0 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .audio_content_container button svg {
+            font-size: 2.35rem !important;
+        }
+
+        .audio_lyrics_display {
+            margin-top: 10px !important;
+            max-width: 100% !important;
+        }
+
+        .audio_lyrics_display .lyrics_line,
+        [data-audio-lyrics-display] .lyrics_line {
+            font-size: clamp(1rem, 3.5vw, 1.25rem) !important;
+            line-height: 1.25em !important;
+        }
+
+        .revealAudioLike {
+            left: 12px !important;
+            bottom: 12px !important;
+            width: auto !important;
+            height: 40px !important;
+            max-width: calc(100vw - 24px) !important;
+            padding: 8px !important;
+        }
+
+        .revealAudioLike #audio_control,
+        .revealAudioLike .audio_control {
+            justify-content: center !important;
+            width: 24px !important;
+        }
+
+        .revealAudioLike .slider-container {
+            display: none !important;
+        }
+
+        #link_preview_container {
+            width: calc(100vw - 24px) !important;
+            max-width: 420px !important;
+        }
+    }
+
+    @media (max-width: 430px) {
+        .bio-container {
+            width: calc(100vw - 12px) !important;
+            max-width: calc(100vw - 12px) !important;
+        }
+
+        .content-container {
+            padding: 14px 12px 48px !important;
+        }
+
+        .top.cardLeft.infoRow {
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            gap: 9px !important;
+        }
+
+        .flex-column {
+            width: 100% !important;
+            align-items: center !important;
+        }
+
+        .flex-column .flex {
+            justify-content: center !important;
+        }
+
+        .svg_container {
+            justify-content: center !important;
+        }
+
+        .bio_description {
+            text-align: center !important;
+        }
+
+        .audio_main_content {
+            grid-template-columns: 64px minmax(0, 1fr) !important;
+            gap: 8px !important;
+        }
+
+        #audio_avatar_container,
+        .audio_image {
+            width: 64px !important;
+            height: 64px !important;
+        }
+
+        .audio_content_container .flex {
+            grid-template-columns: auto minmax(0, 1fr) auto !important;
+        }
+
+        .audio_content_container .slideTrack_native {
+            grid-column: 2 / 3 !important;
+            order: -1 !important;
+        }
+
+        #backward {
+            grid-column: 1 / 2 !important;
+        }
+
+        #playPause {
+            grid-column: 2 / 3 !important;
+            justify-self: center !important;
+        }
+
+        #forward {
+            grid-column: 3 / 4 !important;
+        }
+
+        #currentTime,
+        #totalTime {
+            font-size: 0.82rem !important;
+        }
+
+        .widget_avatar.discord_presence_avatar {
+            width: 54px !important;
+            height: 54px !important;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .content-container,
+        .audio_container {
+            border-radius: 16px !important;
+        }
+
+        .img_container {
+            width: 112px !important;
+            height: 112px !important;
+        }
+
+        #userName {
+            font-size: 2.25rem !important;
+        }
+
+        .svg_container .svg_item {
+            font-size: 2rem !important;
+            padding: 4px 5px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .audio_container {
+            padding: 12px !important;
+        }
+
+        .audio_main_content {
+            grid-template-columns: 82px minmax(0, 1fr) !important;
+            grid-template-rows: auto auto !important;
+            align-items: start !important;
+            gap: 10px 12px !important;
+        }
+
+        #audio_avatar_container,
+        .audio_image {
+            width: 82px !important;
+            height: 82px !important;
+        }
+
+        .audio_content_container {
+            align-self: start !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 8px !important;
+        }
+
+        #musicName {
+            font-size: clamp(1.65rem, 4.8vw, 2.05rem) !important;
+            line-height: 1.08em !important;
+            min-height: 0 !important;
+            margin: 0 !important;
+            text-align: left !important;
+        }
+
+        .audio_content_container .flex {
+            grid-template-columns: 34px minmax(0, 1fr) 34px !important;
+            column-gap: 8px !important;
+            row-gap: 6px !important;
+        }
+
+        .audio_content_container .slideTrack_native {
+            grid-column: 1 / -1 !important;
+            order: -1 !important;
+        }
+
+        #currentTime {
+            grid-column: 1 / 2 !important;
+        }
+
+        #totalTime {
+            grid-column: 3 / 4 !important;
+        }
+
+        #backward,
+        #playPause,
+        #forward {
+            width: 34px !important;
+            height: 34px !important;
+            min-width: 34px !important;
+        }
+
+        .audio_content_container button svg {
+            font-size: 2.15rem !important;
+        }
+
+        .audio_lyrics_display,
+        [data-audio-lyrics-display] {
+            grid-column: 1 / -1 !important;
+            width: 100% !important;
+            margin-top: 2px !important;
+            --lyrics-row-height: 22px !important;
+            --lyrics-row-gap: 4px !important;
+            max-height: 74px !important;
+        }
+
+        .audio_lyrics_display .lyrics_line,
+        [data-audio-lyrics-display] .lyrics_line {
+            font-size: clamp(0.95rem, 3.2vw, 1.15rem) !important;
+            line-height: 1.2em !important;
+        }
+    }
+
+    @media (max-width: 430px) {
+        .audio_main_content {
+            grid-template-columns: 74px minmax(0, 1fr) !important;
+        }
+
+        #audio_avatar_container,
+        .audio_image {
+            width: 74px !important;
+            height: 74px !important;
+        }
+    }
+
+    @media (pointer: coarse), (max-width: 768px) {
+        .profile-body-5 .bio-container .bio_content_container .content-container .content .top .img_container > img.img:not(.img_effect),
+        .bio-container .content .top .img_container > img.img:not(.img_effect) {
+            width: 82% !important;
+            height: 82% !important;
+        }
+
+        .bio_content_container {
+            transform: none !important;
+            transform-style: flat !important;
+        }
+
+        #custom-gif-cursor {
+            display: none !important;
+        }
+
+        * {
+            cursor: auto !important;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .profile-body-5 .bio-container .bio_content_container .content-container .content .top .img_container > img.img:not(.img_effect),
+        .bio-container .content .top .img_container > img.img:not(.img_effect) {
+            width: 82% !important;
+            height: 82% !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            border-radius: 50% !important;
+            object-fit: cover !important;
+        }
+    }
+</style>
+</body></html>
