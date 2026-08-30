@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./styles/tippy_scale.css">
             <link rel="stylesheet" href="./styles/nouislider.min.css">
             <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&subset=vietnamese&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;500;600;700&amp;subset=latin-ext&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/iziToast.min.css">
     <link rel="icon" type="image/x-icon" href="./images/offline.png">
@@ -784,6 +784,7 @@
         background: #23a55a;
         border: 2px solid #0e0e10;
         box-shadow: 0 0 6px rgba(35, 165, 90, 0.8);
+        z-index: 3;
     }
     .about_me_trigger_text {
         position: relative;
@@ -1485,25 +1486,28 @@
             });
             // xu li audio pause va play
             let previousSliderValue = 100;
+            let isMuted = false;
             svgVolumn.addEventListener("click", function () {
-                if (inputValue.value == 0) {
-                    slider.set(previousSliderValue);
-                    inputValue.value = previousSliderValue;
+                isMuted = !isMuted;
+                audio.muted = isMuted;
 
-                    defs.innerHTML = `
-                    <mask id="volumeMedium"><g fill="none" stroke="#fff" stroke-width="4"><path fill="#555" stroke-linejoin="round" d="M24 6v36c-7 0-12.201-9.16-12.201-9.16H6a2 2 0 0 1-2-2V17.01a2 2 0 0 1 2-2h5.799S17 6 24 6Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M32 15a12 12 0 0 1 1.684 1.859A12.07 12.07 0 0 1 36 24c0 2.654-.846 5.107-2.278 7.09A12 12 0 0 1 32 33"/><path stroke-linecap="round" d="M34.236 41.186C40.084 37.696 44 31.305 44 24c0-7.192-3.796-13.496-9.493-17.02"/></g></mask>
-                    `;
-                    mask.setAttribute("mask", "url(#volumeMedium)");
-                } else {
-                    previousSliderValue = parseFloat(inputValue.value);
-
-                    inputValue.value = '0';
-                    slider.set(0);
+                if (isMuted) {
+                    if (inputValue) inputValue.value = '0';
+                    if (slider) slider.set(0);
 
                     defs.innerHTML = `
                     <mask id="volumeMute"><mask id="volumeMute1" width="13" height="13" x="30" y="18" maskUnits="userSpaceOnUse" style="mask-type: alpha;"><path d="M30 18h13v13H30z"/></mask><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><g stroke-linecap="round" mask="url(#volumeMute1)"><path d="m40.735 20.286l-8.486 8.485m.001-8.485l8.485 8.485"/></g><path fill="#555" d="M24 6v36c-7 0-12.201-9.16-12.201-9.16H6a2 2 0 0 1-2-2V17.01a2 2 0 0 1 2-2h5.799S17 6 24 6Z"/></g></mask>
                     `;
                     mask.setAttribute("mask", "url(#volumeMute)");
+                } else {
+                    audio.volume = previousSliderValue / 100;
+                    if (inputValue) inputValue.value = previousSliderValue;
+                    if (slider) slider.set(previousSliderValue);
+
+                    defs.innerHTML = `
+                    <mask id="volumeMedium"><g fill="none" stroke="#fff" stroke-width="4"><path fill="#555" stroke-linejoin="round" d="M24 6v36c-7 0-12.201-9.16-12.201-9.16H6a2 2 0 0 1-2-2V17.01a2 2 0 0 1 2-2h5.799S17 6 24 6Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M32 15a12 12 0 0 1 1.684 1.859A12.07 12.07 0 0 1 36 24c0 2.654-.846 5.107-2.278 7.09A12 12 0 0 1 32 33"/><path stroke-linecap="round" d="M34.236 41.186C40.084 37.696 44 31.305 44 24c0-7.192-3.796-13.496-9.493-17.02"/></g></mask>
+                    `;
+                    mask.setAttribute("mask", "url(#volumeMedium)");
                 }
             });
             }
@@ -2119,9 +2123,9 @@
         }
 
         .img_container .img_effect {
-            width: 132% !important;
-            max-width: 132% !important;
-            max-height: 132% !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
         }
 
         .flex-column {
@@ -2475,16 +2479,21 @@
         }
 
         #backward,
-        #playPause,
-        #forward {
-            width: 48px !important;
-            height: 48px !important;
-            min-width: 48px !important;
-        }
+#playPause,
+#forward {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-radius: 50% !important;
+}
 
-        .audio_content_container button svg {
-            font-size: 3rem !important;
-        }
+#playPause {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    background-color: rgba(255, 255, 255, 0.18) !important;
+}
 
         .audio_content_container button svg {
             font-size: 2.15rem !important;
