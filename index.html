@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mquanprofile</title>
-                <style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="preload" as="image" href="https://cdn.discordapp.com/embed/avatars/0.png">
+                <link rel="preload" as="image" href="https://cdn.discordapp.com/embed/avatars/0.png">
                 <link rel="preload" as="image" href="./images/offline.png">
             <link rel="preload" as="image" href="./assets/images/avatar-quan.png">
      
@@ -34,172 +34,12 @@
                         font-family: 'Sakura';
                         src: url('./images/template_font_Sakura.woff2');
                     }
-                .discord_presence_name,
-    .discord_presence_view_profile {
-        font-family: 'Pixelify Sans', sans-serif !important;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-variation-settings: "slnt" 0;
-    }
-
-    .widget_name.discord_presence_name,
-    .widget_discord_name_link.discord_presence_name,
-    .discord_presence_name {
-        position: relative;
-        display: inline-block;
-        color: #ffe3ef !important;
-        font-size: 2.35rem !important;
-        font-weight: 700 !important;
-        line-height: 1.18em !important;
-        letter-spacing: 0.01em !important;
-        text-decoration: none !important;
-        background: linear-gradient(
-            100deg,
-            #fff0f7 0%,
-            #ffffff 22%,
-            #ff8ec4 46%,
-            #ff4fa0 58%,
-            #ffd2e4 74%,
-            #ffffff 100%
-        );
-        background-size: 240% 100%;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        filter:
-            drop-shadow(0 0 6px rgba(255, 138, 191, 0.85))
-            drop-shadow(0 0 18px rgba(255, 80, 162, 0.55))
-            drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
-        animation:
-            discordNameShine 4s linear infinite,
-            discordNamePulse 3s ease-in-out infinite;
-        transition: filter 0.35s ease, transform 0.35s ease;
-        will-change: background-position, filter;
-    }
-
-    .widget_discord_name_link.discord_presence_name:hover {
-        filter:
-            drop-shadow(0 0 9px rgba(255, 158, 201, 1))
-            drop-shadow(0 0 26px rgba(255, 80, 162, 0.8))
-            drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4));
-        transform: translateY(-1px) scale(1.015);
-    }
-
-    .widget_description,
-    .discord_presence_description {
-        font-family: "Inter", "Segoe UI", Arial, sans-serif !important;
-        color: #fce4ee !important;
-        font-size: 1rem !important;
-        font-weight: 500 !important;
-        line-height: 1.4em !important;
-        letter-spacing: 0.015em !important;
-        text-shadow:
-            0 1px 2px rgba(0, 0, 0, 0.55),
-            0 0 10px rgba(255, 150, 195, 0.25) !important;
-        filter: none !important;
-        background: none !important;
-        -webkit-background-clip: border-box !important;
-        background-clip: border-box !important;
-        -webkit-text-fill-color: #fce4ee !important;
-        animation: none !important;
-        opacity: 0.95 !important;
-    }
-
-    .discord_presence_view_profile {
-        font-size: 1.2rem !important;
-        font-weight: 400 !important;
-        color: #fafafa !important;
-        background-color: #229150 !important;
-        border-radius: 8px !important;
-    }
-
-    @keyframes discordNameShine {
+                @keyframes discordNameShine {
         0%   { background-position: 0% 50%; }
         100% { background-position: 240% 50%; }
     }
-
-    @keyframes discordNamePulse {
-        0%, 100% {
-            filter:
-                drop-shadow(0 0 6px rgba(255, 138, 191, 0.75))
-                drop-shadow(0 0 16px rgba(255, 80, 162, 0.45))
-                drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
-        }
-        50% {
-            filter:
-                drop-shadow(0 0 9px rgba(255, 158, 201, 0.95))
-                drop-shadow(0 0 24px rgba(255, 80, 162, 0.7))
-                drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
-        }
-    }
     </style>
-            <style>
-    .zyo-discord-presence-skeleton,
-    .zyo-second-tab-skeleton {
-        width: 100% !important;
-        pointer-events: none;
-    }
-    .zyo-skeleton-widget-content {
-        min-height: 86px;
-    }
-    .zyo-discord-presence-skeleton .widget_text_container,
-    .zyo-second-tab-skeleton .widget_text_container {
-        min-width: 0;
-        flex: 1;
-    }
-    .zyo-discord-presence-skeleton .widget_avatar_container,
-    .zyo-second-tab-skeleton .widget_avatar_container {
-        flex: 0 0 auto;
-    }
-    .zyo-skeleton-circle,
-    .zyo-skeleton-line {
-        width: 100%;
-        display: block;
-        background: linear-gradient(90deg, rgba(255,255,255,.08), rgba(255,255,255,.22), rgba(255,255,255,.08));
-        background-size: 220% 100%;
-        animation: zyoSkeletonLoading 1.1s linear infinite;
-    }
-    .zyo-skeleton-circle {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-    }
-    .zyo-skeleton-line {
-        width: 100%;
-        max-width: 180px;
-        height: 12px;
-        margin: 6px 0;
-        border-radius: 999px;
-    }
-    .zyo-skeleton-title {
-        max-width: 120px;
-        height: 14px;
-    }
-    .zyo-skeleton-short {
-        max-width: 82px;
-    }
-    .zyo-skeleton-status-dot {
-        width: 18px;
-        height: 18px;
-    }
-    .profile-body-4 .zyo-skeleton-widget-content {
-        min-height: 88px;
-    }
-    .profile-body-4 .zyo-discord-presence-skeleton,
-    .profile-body-4 .zyo-second-tab-skeleton {
-        min-width: 280px;
-    }
-    @media (max-width: 768px) {
-        .profile-body-4 .zyo-discord-presence-skeleton,
-        .profile-body-4 .zyo-second-tab-skeleton {
-            min-width: 0;
-        }
-    }
-    @keyframes zyoSkeletonLoading {
-        from { background-position: 220% 0; }
-        to { background-position: -220% 0; }
-    }
-</style><script>
+            <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   function zyoLoadAnalytics(){
@@ -289,97 +129,11 @@
         overflow: hidden;
     }
 
-    .discord_presence_widget .widget_avatar_container {
-        position: relative;
-        overflow: visible;
-    }
-
     @media (max-width: 768px) {
         .bio-container .content .top .img_container > img.img:not(.img_effect) {
             width: 82%;
             height: 82%;
         }
-    }
-
-    .discord_presence_avatar_effect {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 138%;
-        height: 138%;
-        max-width: none;
-        object-fit: contain;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-    }
-
-    .discord_presence_widget .discord_presence_avatar {
-        position: relative;
-        z-index: 1;
-    }
-
-    .discord_presence_widget .discord_presence_status {
-        position: absolute;
-        z-index: 3;
-    }
-    .discord_presence_status {
-        width: 16px !important;
-        height: 16px !important;
-        border-radius: 50% !important;
-        border: 3px solid rgba(11, 11, 11, 0.95) !important;
-        background: #747f8d !important;
-        object-fit: none !important;
-    }
-
-    .discord_presence_status[data-status="online"] { background: #23a55a !important; }
-    .discord_presence_status[data-status="idle"] { background: #f0b232 !important; }
-    .discord_presence_status[data-status="dnd"] { background: #f23f43 !important; }
-    .discord_presence_status[data-status="offline"] { background: #80848e !important; }
-
-    .discord_presence_widget .widget_content {
-        position: relative;
-        border-radius: 28px !important;
-        border: 1.5px solid rgba(255, 174, 209, 0.28) !important;
-        background:
-            linear-gradient(150deg, rgba(40, 22, 33, 0.62) 0%, rgba(22, 14, 20, 0.72) 100%) !important;
-        box-shadow:
-            0 10px 30px rgba(0, 0, 0, 0.38),
-            0 0 0 1px rgba(255, 255, 255, 0.04) inset,
-            0 1px 0 rgba(255, 255, 255, 0.07) inset,
-            0 0 24px rgba(255, 80, 162, 0.14) !important;
-        -webkit-backdrop-filter: blur(8px) saturate(1.1);
-        backdrop-filter: blur(8px) saturate(1.1);
-        transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease !important;
-    }
-
-    .discord_presence_widget .widget_content::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        padding: 1.5px;
-        background: linear-gradient(135deg,
-            rgba(255, 210, 228, 0.45),
-            rgba(255, 80, 162, 0.18) 45%,
-            rgba(255, 255, 255, 0.05) 70%,
-            rgba(255, 142, 196, 0.35));
-        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-        -webkit-mask-composite: xor;
-        mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-        mask-composite: exclude;
-        pointer-events: none;
-        opacity: 0.9;
-    }
-
-    .discord_presence_widget .widget_content:hover {
-        border-color: rgba(255, 174, 209, 0.4) !important;
-        box-shadow:
-            0 14px 38px rgba(0, 0, 0, 0.42),
-            0 0 0 1px rgba(255, 255, 255, 0.05) inset,
-            0 1px 0 rgba(255, 255, 255, 0.08) inset,
-            0 0 34px rgba(255, 80, 162, 0.22) !important;
-        transform: translateY(-2px);
     }
 
     [data-like-button].active .likeIcon,
@@ -801,6 +555,7 @@
                                                 <div class="img_container">
                             <img src="./assets/images/avatar_mq.png" alt="Nguyễn Minh Quân" class="img">
                                                             <img class="img_effect" style="" src="./assets/images/avatar_mq.png">
+                                                            <img src="./assets/images/sleep-pixel.gif" class="sleep_effect_icon" alt="sleep">
                                                     </div>
                                                 <div class="flex-column">
                             <div class="flex">
@@ -834,29 +589,31 @@
                                         </div>
                                                     </div>
                     </div>
-                                            <div class="flex_discord">
-                                                                                        <div class="about_me_trigger_card" id="about_me_trigger" role="button" tabindex="0" onclick="openAboutMe(event)" onkeydown="if(event.key==='Enter'||event.key===' '){openAboutMe(event)}">
-    <span class="about_me_shimmer"></span>
-    <div class="about_me_trigger_inner">
-        <div class="about_me_avatar_ring">
-            <img src="./assets/images/IMG_7462.jpg" alt="Nguyễn Minh Quân" class="about_me_avatar_img">
-            <span class="about_me_status_dot"></span>
-        </div>
-        <div class="about_me_trigger_text">
-            <span class="about_me_trigger_name">Nguyễn Minh Quân</span>
-            <span class="about_me_trigger_tag">
-                <i class="fa-solid fa-code"></i> "It's not a bug - it's an undocumented feature."
-                <span class="about_me_trigger_dot">•</span>
-            </span>
-        </div>
-        <div class="about_me_trigger_spacer"></div>
-        <div class="about_me_cta">
-            <span>View Profile</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="about_me_cta_arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </div>
-    </div>
-</div>                                                                                </div>
-                                                                                                                    </div>
+                    <div class="flex_discord">
+                        <div class="about_me_trigger_card" id="about_me_trigger" role="button" tabindex="0" onclick="openAboutMe(event)" onkeydown="if(event.key==='Enter'||event.key===' '){openAboutMe(event)}">
+                            <span class="about_me_shimmer"></span>
+                            <div class="about_me_trigger_inner">
+                                <div class="about_me_avatar_ring">
+                                    <img src="./assets/images/IMG_7462.jpg" alt="Nguyễn Minh Quân" class="about_me_avatar_img">
+                                    <img src="https://cdn.discordapp.com/avatar-decoration-presets/a_0559ecfc5e0d72ed1a2c5f1a6fd84558.png" class="discord_presence_avatar_effect" alt="" aria-hidden="true">
+                                    <span class="about_me_status_dot"></span>
+                                </div>
+                                <div class="about_me_trigger_text">
+                                    <span class="about_me_trigger_name">Nguyễn Minh Quân</span>
+                                    <span class="about_me_trigger_tag">
+                                        <i class="fa-solid fa-code"></i> "It's not a bug - it's an undocumented feature."
+                                        <span class="about_me_trigger_dot">•</span>
+                                    </span>
+                                </div>
+                                <div class="about_me_trigger_spacer"></div>
+                                <div class="about_me_cta">
+                                    <span>View Profile</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="about_me_cta_arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 <div class="about_me_backdrop" id="about_me_backdrop" onclick="closeAboutMe()"></div>
 <div class="about_me_popup" id="about_me_popup" role="dialog" aria-modal="true" aria-labelledby="about_me_popup_title">
@@ -928,6 +685,30 @@
         if (e.key === 'Escape') closeAboutMe();
     });
 </script>
+<style>
+    .sleep_effect_icon {
+        position: absolute;
+        top: -10%;      
+        right: 20%;    
+        width: 35px;  
+        height: auto;
+        z-index: 10;
+        pointer-events: none; 
+        opacity: 0.9;
+    }
+    .discord_presence_avatar_effect {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 138%;
+        height: 138%;
+        max-width: none;
+        object-fit: contain;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+</style>
 <style>
     /* ================= About Me trigger bar ================= */
     .about_me_trigger_card {
@@ -1951,46 +1732,10 @@
             const zyoOverlayAudio = document.querySelector('.overlay_audio');
         if (zyoOverlayAudio) {
             zyoOverlayAudio.addEventListener('click', function(){
-            if (false) fetch("", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-Timestamp': '0',
-                    'X-Sign': 'example-signature',
-                },
-                body: JSON.stringify({ 
-                    user_id: 0, 
-                    user_view: 0, 
-                    referrer: '' 
-                }),
-            });
             zyoTrackProfileView();
             });
         }
     </script>
-<style>
-    .text_effect_5 {
-        color: #f8f8f8;
-        background: linear-gradient(90deg, transparent, var(---nameColor), transparent);
-        background-repeat: no-repeat;
-        background-size: 80%;
-        animation: shine_effect 2s linear infinite;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: var(--nameColor25);
-        background-clip: text;
-    }
-    /* shine */
-    .text_effect_3 {
-        overflow: hidden;
-        background: linear-gradient(90deg, #000, var(--nameColor), var(--nameColor), #000);
-        background-repeat: no-repeat;
-        background-size: 80%;
-        animation: shine_effect 2s linear infinite;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    }
-</style>
     <script>
         function zyoWidgetMarqueeContent(container) {
             if (container.matches?.('[data-widget-marquee]')) {
@@ -2123,45 +1868,6 @@
                 zyoUpdateWidgetDescriptionMarquee();
             }, 120);
         });
-
-        
-        function zyoFormatDiscordActivityElapsed(totalSeconds) {
-            const seconds = Math.max(0, Math.floor(totalSeconds));
-            const hours = Math.floor(seconds / 3600);
-            const minutes = Math.floor((seconds % 3600) / 60);
-            const remainingSeconds = seconds % 60;
-            const pad = (value) => String(value).padStart(2, '0');
-
-            return `${pad(hours)}:${pad(minutes)}:${pad(remainingSeconds)}`;
-        }
-
-        function zyoUpdateDiscordActivityTimers(root = document) {
-            root.querySelectorAll?.('[data-discord-activity-started-at]').forEach((item) => {
-                const startedAt = Number(item.dataset.discordActivityStartedAt || 0);
-                const text = item.querySelector('.discord_presence_activity_time');
-
-                if (!startedAt || !text) {
-                    return;
-                }
-
-                text.textContent = zyoFormatDiscordActivityElapsed((Date.now() / 1000) - startedAt);
-            });
-        }
-
-        function zyoStartDiscordActivityTimers() {
-            zyoUpdateDiscordActivityTimers();
-
-            if (window.zyoDiscordActivityTimerInterval) {
-                return;
-            }
-
-            window.zyoDiscordActivityTimerInterval = window.setInterval(() => {
-                zyoUpdateDiscordActivityTimers();
-            }, 1000);
-        }
-
-        document.addEventListener('DOMContentLoaded', zyoStartDiscordActivityTimers);
-        window.addEventListener('load', zyoStartDiscordActivityTimers);
 
         function zyoActivateInjectedReveal(root) {
             if (!root) {
@@ -2400,9 +2106,10 @@
         }
 
         .top.cardLeft.infoRow {
-            flex-wrap: nowrap !important;
+            flex-direction: column !important;
             align-items: center !important;
-            gap: 12px !important;
+            text-align: center !important;
+            gap: 16px !important;
         }
 
         .img_container {
@@ -2426,6 +2133,7 @@
         .flex-column .flex {
             flex-wrap: wrap !important;
             align-items: center !important;
+            justify-content: center !important;
             gap: 5px !important;
             row-gap: 4px !important;
         }
@@ -2483,68 +2191,6 @@
             width: 100% !important;
             margin-top: 12px !important;
             gap: 8px !important;
-        }
-
-        .widget_container.discord_presence_widget,
-        .widget_container.discord_presence_widget .widget_content {
-            width: 100% !important;
-            max-width: 100% !important;
-            min-width: 0 !important;
-        }
-
-        .widget_container.discord_presence_widget .widget_content {
-            padding: 8px !important;
-            gap: 8px !important;
-            border-radius: 18px !important;
-        }
-
-        .widget_avatar_container {
-            flex: 0 0 auto !important;
-        }
-
-        .widget_avatar.discord_presence_avatar {
-            width: 78px !important;
-            height: 78px !important;
-        }
-
-        .discord_presence_avatar_effect {
-            width: 132% !important;
-            height: 132% !important;
-        }
-
-        .widget_text_container,
-        .widget_text_inner,
-        .widget_name_container,
-        .widget_description_container {
-            min-width: 0 !important;
-            max-width: 100% !important;
-            overflow: hidden !important;
-        }
-
-        .widget_tag_flex {
-            min-width: 0 !important;
-            gap: 6px !important;
-        }
-
-        .widget_name.discord_presence_name,
-        .widget_discord_name_link.discord_presence_name {
-            max-width: 100% !important;
-            font-size: clamp(1.45rem, 4.5vw, 1.85rem) !important;
-            line-height: 1.1em !important;
-            filter: drop-shadow(0 0 7px rgba(255, 80, 162, 0.72)) !important;
-        }
-
-        .widget_description,
-        .discord_presence_description {
-            font-size: clamp(1.05rem, 3.3vw, 1.22rem) !important;
-            line-height: 1.25em !important;
-        }
-
-        .discord_presence_view_profile {
-            min-height: 22px !important;
-            padding: 0 9px !important;
-            font-size: 0.95rem !important;
-            border-radius: 7px !important;
         }
 
         .audio_container {
@@ -2753,11 +2399,6 @@
         #totalTime {
             font-size: 0.82rem !important;
         }
-
-        .widget_avatar.discord_presence_avatar {
-            width: 54px !important;
-            height: 54px !important;
-        }
     }
 
     @media (max-width: 360px) {
@@ -2836,9 +2477,13 @@
         #backward,
         #playPause,
         #forward {
-            width: 34px !important;
-            height: 34px !important;
-            min-width: 34px !important;
+            width: 48px !important;
+            height: 48px !important;
+            min-width: 48px !important;
+        }
+
+        .audio_content_container button svg {
+            font-size: 3rem !important;
         }
 
         .audio_content_container button svg {
